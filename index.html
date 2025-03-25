@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tharindu Chanaka - Full Stack Software Developer</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* Allow items to wrap */
+        gap: 20px;
+      }
+
+      .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        /* Keep it behind the content */
+      }
+
+      .service-item {
+        background: #1a1a1a;
+        padding: 30px;
+        border-radius: 12px;
+        width: 100%;
+        /* Full width on mobile */
+        max-width: 350px;
+        /* Limit width for larger screens */
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image fills the container */
+      }
+
+      .glow-button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        background: transparent;
+        color: #000;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        font-weight: bold;
+      }
+
+      .glow-button:hover {
+        box-shadow: 0 0 15px #0cde91;
+      }
+
+      /* Responsive Styling */
+      @media (min-width: 992px) {
+        /* Large Screens (Col 4) */
+        .service-item {
+          width: calc(33.33% - 20px);
+          /* Makes it Col-4 */
+        }
+      }
+
+      @media (max-width: 768px) {
+        /* Mobile Screens (Col 12) */
+        .service-item {
+          width: 100%;
+          /* Full width */
+          max-width: 100%;
+        }
+      }
+
+      strong {
+        color: #0cde91;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .cta-btn:hover {
+        background: #0cde91 !important;
+        color: #1a1a1a !important;
+      }
+    </style>
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <h1 class="sitename">Tharindu Chanaka</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#blogs">Blog Posts</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list bg-dark text-light"></i>
+        </nav>
+
+        <a class="cta-btn" href="#call-to-action">Get Started</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="hero" class="hero section dark-background">
+        <!-- Video Background -->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+          "
+        >
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            style="width: 100%; height: 100%; object-fit: cover"
+          >
+            <source src="assets/videos/hero-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+      
+          <!-- Content Overlay -->
+          <div
+            class="container d-flex flex-column align-items-center text-center"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: white;
+            "
+          >
+            <h2 data-aos="fade-up" data-aos-delay="100">Hi, I'm Tharindu 🎯</h2>
+            <p data-aos="fade-up" data-aos-delay="200">
+              A passionate full-stack developer, developing cool innovations
+              with coding
+            </p>
+      
+            <!-- Social Links -->
+            <div data-aos="fade-up" data-aos-delay="300" style="margin-top: 5px;">
+              <a href="https://github.com/Tharindu714" target="_blank" 
+                 style="color: white; text-decoration: none; margin-right: 15px;">
+                <i class="bi bi-github" style="font-size: 24px;"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/tharinduchanaka8754/" target="_blank" 
+                 style="color: white; text-decoration: none;">
+                <i class="bi bi-linkedin" style="font-size: 24px;"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- About Section -->
+
+      <section id="about" class="about section bg-black">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2 style="color: white; text-transform: uppercase">About Me</h2>
+          <p style="color: whitesmoke; font-size: 20px">
+            Passionate about building innovative and scalable software
+            solutions.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4 align-items-center">
+            <!-- Professional Photo -->
+            <div
+              class="col-lg-4 text-center"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="assets/img/profile-pic.jpg"
+                alt="Tharindu"
+                class="img-fluid rounded-circle"
+                style="width: 300px; height: 300px; object-fit: cover"
+              />
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <span class="text-light fs-5">
+                I have over 4 years of experience in frontend development,
+                including 2 years of backend development, focusing on creating
+                intuitive and user-centric web applications.
+              </span>
+              <br /><br />
+              <span class="fs-6 fw-bold" style="color: #0cde91">
+                I excel at developing state-of-the-art web applications,
+                reusable component libraries, design systems, and robust
+                backends. With expertise in Java, PHP, React Native, and C++ for
+                IoT projects, I deliver secure, responsive, and scalable
+                solutions. Dedicated to creating user-centric applications and
+                desktop systems like POS, I ensure exceptional user experiences
+                and business success.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="clients section bg-black">
+        <div class="container section-title" data-aos="fade-up">
+          <h2 style="color: white; text-transform: uppercase">Skills</h2>
+          <p style="color: whitesmoke; font-size: 20px">
+            These are my Recent followed Skills & Technologies
+          </p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row g-0 clients-wrap">
+            <!-- Skill items will be dynamically inserted here -->
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Services Section -->
+      <section
+        id="services"
+        class="services section"
+        style="
+          background: #0d0d0d;
+          color: #fff;
+          padding: 80px 0;
+          text-align: center;
+        "
+      >
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2 style="color: white; text-transform: uppercase">Projects</h2>
+          <p style="color: whitesmoke; font-size: 20px">
+            These are my all completed Projects and freelancer works
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div
+          id="projects-container"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+          "
+        ></div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Call To Action Section -->
+      <section
+        id="call-to-action"
+        class="call-to-action section dark-background"
+      >
+        <img src="assets/img/cta-bg.jpg" alt="" />
+
+        <div class="container">
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-xl-9 text-center text-xl-start">
+              <h3>Let's Bring Your Vision to Life!</h3>
+              <p>
+                Ready to transform your ideas into reality? Whether you need a
+                custom website, mobile app development, or digital solutions for
+                your business, I'm here to help. Let's discuss your project
+                requirements, timelines, and how we can create something
+                exceptional together. Call us directly at
+                <strong>+94 75 144 1764</strong> or click the button to start
+                your digital journey today!
+              </p>
+            </div>
+            <div class="col-xl-3 cta-btn-container text-center">
+              <a class="cta-btn align-middle" href="tel:+94751441764">
+                <i class="bi bi-phone me-2"></i> Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Call To Action Section -->
+      <section id="experience" class="experience-section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2 style="color: white; text-transform: uppercase">Experience</h2>
+          <p style="color: whitesmoke; font-size: 17px">
+            I've collaborated with companies of various sizes, <br>ranging from startups to mid-sized tech firms.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item left">
+            <div class="timeline-content">
+            <div class="timeline-marker-ab"></div>
+              <img
+                src="assets\img\clients\goozby.jpg"
+                alt="Gozzby"
+                class="company-logo"
+              />
+              <h3 style="color: #0cde91;">Gozzby Software Solutions</h3>
+              <span class="job-title">Full-Stack Engineer</span>
+              <span class="duration">Nov 2022 - Jul 2023</span>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <div class="timeline-marker"></div>
+              <img
+                src="assets\img\clients\deltacodex.jpg"
+                alt="deltacodexsoftwares"
+                class="company-logo"
+              />
+              <h3 style="color: #0cde91;">Delta Codex Software Solutions</h3>
+              <span class="job-title">Founder & Developer</span>
+              <span class="duration">Sep 2023 - Present</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Recent Posts Section -->
+      <section id="blogs" class="recent-posts section bg-dark">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2 style="color: white; text-transform: uppercase">Blog Posts</h2>
+          <p style="color: whitesmoke; font-size: 15px">
+            A collection of my completed projects and freelance work, <br>showcasing innovation and expertise.
+          </p>
+        </div>
+        <!-- End Section Title -->
+        <div
+          id="Post-container"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+          "
+        ></div>
+      </section>
+      <!-- /Recent Posts Section -->
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+      <div class="container">
+        <h3 class="sitename">Say Hi! 👋</h3>
+
+        <!-- Contact Details -->
+        <div class="contact-info text-start mb-4">
+          <p class="mb-3">
+            <a href="tel:+94751441764" class="text-decoration-none text-light">
+              <i class="bi bi-phone-fill me-3"></i>+94 75 144 1764
+            </a>
+          </p>
+          <p>
+            <a
+              href="mailto:deltacodexsoftwares@gmail.com"
+              class="text-decoration-none text-light"
+            >
+              <i class="bi bi-envelope-fill me-3"></i
+              >deltacodexsoftwares@gmail.com
+            </a>
+          </p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links d-flex justify-content-center mb-4">
+          <a
+            href="https://www.linkedin.com/in/tharinduchanaka8754/"
+            target="_blank"
+            class="mx-3"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/Tharindu714" target="_blank" class="mx-3">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="container">
+          <div class="copyright text-center">
+            <span
+              >Copyright © <strong>tharinduc.me</strong> All Rights
+              Reserved</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

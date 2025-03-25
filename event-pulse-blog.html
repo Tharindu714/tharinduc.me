@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Pulse: The Ultimate Fan Engagement Platform</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            line-height: 1.6;
+            background-color: #333;
+            color: #fffdfd;
+            padding: 20px;
+        }
+
+        a {
+            color: #112240;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            margin-bottom: 20px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #0cde91;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+
+        /* Blog Post Container */
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #000000;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: #0cde91;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+        }
+
+        /* Image Placeholder Styles */
+        .image-placeholder {
+            background-color: #333;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            color: #dadada;
+            border: 2px dashed #bbb;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 5px;
+            background: url('assets/img/main-blog-img/eventPulse.jpg')center/contain no-repeat;
+            ;
+        }
+
+        .carousel img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .carousel img.active {
+            opacity: 1;
+        }
+
+        /* Code Snippet Section */
+        .code-snippet {
+            margin-bottom: 30px;
+        }
+
+        .code-snippet h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #c8c8c8;
+        }
+
+        /* Challenges Section */
+        .challenge {
+            background: #333;
+            border-left: 5px solid #0cde91;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .challenge h4 {
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            color: #0cde91;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            color: #b3b3b3;
+        }
+
+        strong {
+            color: #0cde91;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0cde91;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Event Pulse: The Ultimate Fan Engagement Platform</h1>
+        <p>
+            A comprehensive look into an Mobile Application solution using Java & NoSQL
+        </p>
+        <a href="index.html#blogs" class="back-button">← See more Blogs</a>
+    </header>
+
+    <div class="blog-container">
+        <!-- Project Description -->
+        <section class="section" id="project-description">
+            <h2>Application Description</h2>
+            <p>
+                Event Pulse is a cutting-edge fan engagement platform designed to
+                bridge the gap between entertainment enthusiasts and their favorite
+                movies, TV series, and games. Developed for Premiere Wave Studios,
+                this Android application enables users to track premieres, engage in
+                community discussions, and access exclusive content such as trailers,
+                teasers, and promotional materials.
+            </p>
+            <!-- Image: Circuit Diagram Placeholder -->
+            <div class="carousel">
+                <img class="carousel-image" src="assets/img/blog/epSlide1.JPG" alt="Circuit Diagram">
+                <img class="carousel-image" src="assets/img/blog/epSlide2.JPG" alt="System Architecture">
+                <img class="carousel-image" src="assets/img/blog/epSlide3.JPG" alt="Mobile App UI">
+            </div>
+            <h2>Why Event Pulse?</h2>
+            <p>
+                <li>Centralized Entertainment Hub: No more fragmented event tracking.</li>
+                <li>Interactive Features: Engage in forums and discussions.</li>
+                <li>Real-Time Notifications: Never miss an important update.</li>
+                <li>Admin Panel for Content Management: Seamless content and user moderation</li>
+            </p>
+
+            <h2>Key Features</h2>
+            <p>
+            <h4>User-Side Application</h4>
+            <li>Premiere Tracking: Get notified about upcoming releases.</li>
+            <li>Community Forums: Discuss and share opinions.</li>
+            <li>Exclusive Content Access: View trailers, teasers, and behind-the-scenes.</li>
+            <li>Personalized Recommendations: Based on user preferences.</li>
+            </p>
+
+            <p>
+            <h4>Admin-Side Application</h4>
+            <li>User Management: Approve or moderate users.</li>
+            <li>Content Uploads: Add trailers, images, and news.</li>
+            <li>Analytics Dashboard: Track engagement metrics.</li>
+            </p>
+            <!-- Image: Physical Structure Placeholder -->
+            <div class="carousel">
+                <img class="carousel-image" src="assets/img/blog/epSlide4.JPG" alt="Circuit Diagram">
+                <img class="carousel-image" src="assets/img/blog/epSlide5.JPG" alt="System Architecture">
+                <img class="carousel-image" src="assets/img/blog/epSlide6.JPG" alt="Mobile App UI">
+            </div>
+            <h2>Tech Stack</h2>
+            <p>
+                <li><strong>Language: </strong> Java (Android)</li>
+                <li><strong>Database: </strong> Firebase Firestore</li>
+                <li><strong>APIs: </strong> YouTube API, IMDB API, Rotten Tomatoes</li>
+                <li><strong>Real-Time Notifications: </strong> Firebase Cloud Messaging (FCM)</li>
+                <li><strong>UI Library: </strong> MPAndroidChart for interactive graphs</li>
+            </p>
+        </section>
+
+        <!-- Technology Stack Explanation -->
+        <section class="section" id="tech-stack">
+            <h2>Why These Technologies?</h2>
+            <p>
+                The Event Pulse application is designed to provide real-time event updates, seamless user interactions,
+                and dynamic data visualization. To achieve this, the following technologies were chosen:
+            </p>
+            <ul>
+                <li>
+                    <strong>Java (Android):</strong> Chosen for its stability, performance, and native support for
+                    Android development, ensuring smooth execution and better hardware compatibility.
+                </li>
+                <li>
+                    <strong>Firebase Firestore:</strong> A NoSQL cloud database providing real-time synchronization,
+                    making event updates instant and ensuring scalability for large user bases.
+                </li>
+                <li>
+                    <strong>YouTube API, IMDB API & Rotten Tomatoes:</strong> Integrated to fetch and display relevant
+                    media content, enhancing the user experience with rich event-related data.
+                </li>
+                <li>
+                    <strong>Firebase Cloud Messaging (FCM):</strong> Enables real-time push notifications, ensuring
+                    users receive instant updates about upcoming events and changes.
+                </li>
+                <li>
+                    <strong>MPAndroidChart:</strong> Used for creating interactive and visually appealing graphs,
+                    allowing users to analyze event trends and insights effectively.
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- Code Snippets Section -->
+        <section class="section" id="code-snippets">
+            <h2>Implementation Details</h2>
+
+            <!-- C++ Code Snippet -->
+            <div class="code-snippet">
+                <h3>User Authentication (Code Snippet)</h3>
+                <pre>
+            FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+            mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        updateUI(user);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        </pre>
+            </div>
+
+            <!-- Java Code Snippet -->
+            <div class="code-snippet">
+                <h3>Event Tracking (Firestore Database Structure)</h3>
+                <pre>
+            {
+                "events": [
+                  {
+                    "id": "event123",
+                    "title": "New Movie Premiere",
+                    "release_date": "2025-07-15",
+                    "trailer_url": "https://youtube.com/xyz",
+                    "description": "An action-packed thriller!"
+                  }
+                ]
+              }
+        </pre>
+            </div>
+
+            <!-- React.js Code Snippet -->
+            <div class="code-snippet">
+                <h3>Admin Dashboard (Code Snippet)</h3>
+                <pre>
+            DatabaseReference ref = FirebaseDatabase.getInstance().getReference("events");
+            ref.child(eventId).setValue(eventData)
+                .addOnSuccessListener(aVoid -> Log.d("Admin", "Event added successfully"))
+                .addOnFailureListener(e -> Log.e("Admin", "Error adding event", e));
+        </pre>
+            </div>
+        </section>
+
+        <!-- Challenges & Solutions Section -->
+        <section class="section" id="challenges">
+            <h2>There are more in my Mind Yet 🤓</h2>
+            <div class="carousel">
+                <img class="carousel-image" src="assets/img/blog/epSlide9.JPG" alt="Circuit Diagram">
+                <img class="carousel-image" src="assets/img/blog/epSlide7.JPG" alt="System Architecture">
+                <img class="carousel-image" src="assets/img/blog/epSlide8.JPG" alt="Mobile App UI">
+            </div>
+            <br>
+            <!-- Challenge 1 -->
+            <div class="challenge">
+                <h4>Future Enhancements</h4>
+                <p>
+                    <li><strong>AI-Powered Recommendations: </strong> Enhance user experience with personalized content.
+                    </li>
+                    <li><strong>In-App Ticket Booking: </strong> Direct links to ticket purchases.</li>
+                    <li><strong>Live Streaming Events: </strong> Watch exclusive live premieres.</li>
+                </p>
+            </div>
+
+            <!-- Challenge 2 -->
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="section" id="final-thoughts">
+            <h2>Final Thoughts</h2>
+            <p>
+                Event Pulse is revolutionizing fan engagement by offering a seamless and immersive experience. With a
+                powerful admin panel, real-time notifications, and personalized content, this app is a game-changer in
+                the entertainment industry.
+            </p>
+            <h4>Stay tuned for updates and new features!</h4>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 <strong>tharinduc.me</strong> All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let carousels = document.querySelectorAll(".carousel"); // Select all carousels
+            let index = 0;
+
+            function showNextImage() {
+                carousels.forEach(carousel => {
+                    let images = carousel.querySelectorAll(".carousel-image");
+                    images.forEach(img => img.classList.remove("active")); // Hide all images
+                    images[index].classList.add("active"); // Show the current image
+                });
+
+                index = (index + 1) % carousels[0].querySelectorAll(".carousel-image").length;
+            }
+
+            // Initialize first images
+            carousels.forEach(carousel => {
+                let images = carousel.querySelectorAll(".carousel-image");
+                if (images.length > 0) {
+                    images[0].classList.add("active");
+                }
+            });
+
+            // Synchronize image change across all carousels every 3 seconds
+            setInterval(showNextImage, 3000);
+        });
+
+    </script>
+</body>
+
+</html>
