@@ -69,12 +69,12 @@
   /**
    * Preloader
    */
-  const preloader = document.querySelector("#preloader");
-  if (preloader) {
-    window.addEventListener("load", () => {
-      preloader.remove();
-    });
-  }
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("preloader").style.opacity = "0";
+      setTimeout(() => document.getElementById("preloader").remove(), 500);
+    }, 2000); // Keep it for at least 2s for effect
+  });
 
   /**
    * Scroll top button
@@ -277,7 +277,7 @@
       description:
         "greengardenbungalow.com is an online platform that allows tourists to reserve bookings & get well-acquainted with the bungalow.",
       technologies: ["HTML5", "Bootstrap", "CSS3", "JavaScript", "PHP"],
-      image: "assets/img/portfolio/green.jpg",
+      image: "assets/img/portfolio/green.JPG",
       link: "https://www.greengardenbungalow.com/",
     },
     {
@@ -293,7 +293,7 @@
       description:
         "bluedotstravelsandtours.com is an online platform that allows tourists to reserve bookings, aware more about the county & get a detail-wise description about the tours and hotels",
       technologies: ["HTML5", "Tailwind", "CSS3", "JavaScript", "PHP"],
-      image: "assets/img/portfolio/bluedots.jpg",
+      image: "assets/img/portfolio/bluedots.JPG",
       link: "https://bluedotstravelsandtours.com/",
     },
 
