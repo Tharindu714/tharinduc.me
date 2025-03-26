@@ -554,6 +554,48 @@
       link: "event-pulse-blog.html",
     },
 
+    {
+      name: "CineSync: Your Personal Movie Database & Review App",
+      description:
+        "Filter movies, TV shows, and anthologies – add your watched films and thoughts to build lasting memories.",
+      technologies: ["Java", "Android", "Firebase", "SQLite", "HTTPS"],
+      image: "assets/img/main-blog-img/cinesync.jpg",
+      link: "cine-sync-blog.html",
+    },
+
+    {
+      name: "Tranquil Terrace HMS: A Comprehensive Hotel Management System",
+      description:
+        "Tranquil Terrace HMS is a large-scale hotel management solution built using Java and MySQL. Developed as a group project, this system manages reservations, guest check-ins/outs, billing, and employee schedules across multiple departments, such as Administration, HR, Front Office, and Kitchen.",
+      technologies: ["Java", "MySQL", "Netbeans"],
+      image: "assets/img/main-blog-img/tranquil.jpg",
+      link: "Hotel-management-system-blog.html",
+    },
+
+    {
+      name: "React Native Chat App: Bridging Real-Time Communication",
+      description:
+        "In this post, I discuss the development of a React Native Chat App. The app is designed to provide seamless, real-time messaging by leveraging a robust backend built with Java and MySQL. It also integrates ngrok for testing remote connections.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "Java",
+        "ngrok",
+        "HTML5",
+      ],
+      image: "assets/img/main-blog-img/supechat.jpg",
+      link: "react-chatApp-blog.html",
+    },
+
+    {
+      name: "Hackothan Winning TMS: Real-Time Collaborative Task Management System",
+      description:
+        "Create a web-based application using PHP and a relational database system (e.g., MySQL) that allows users to collaboratively manage tasks and projects in real-time. This scenario is suitable for teams who want to showcase their PHP and database integration skills.",
+      technologies: ["PHP", "Hack/HHVM", "CSS3", "JavaScript"],
+      image: "assets/img/main-blog-img/teamup.jpg",
+      link: "teamUp-Task-collaboration-management-system.html",
+    },
   ];
 
   window.addEventListener("load", navmenuScrollspy);
@@ -627,7 +669,7 @@
 
   const postContainer = document.getElementById("Post-container");
 
-  posts.forEach((posts) => {
+  posts.forEach((post) => {
     const postDiv = document.createElement("div");
     postDiv.classList.add("service-item");
     postDiv.style = `
@@ -647,14 +689,14 @@
 
     postDiv.innerHTML = `
       <div class="image-container">
-        <img src="${posts.image}" alt="Project Image" />
+        <img src="${post.image}" alt="Project Image" />
       </div>
       
-      <h3 class="title">${posts.name}</h3>
-      <p class="description">${posts.description}</p>
+      <h3 class="title">${post.name}</h3>
+      <p class="description">${post.description}</p>
     
       <div class="technologies">
-        ${posts.technologies
+        ${post.technologies
           .map(
             (tech) => `
             <span class="tech-tag">
@@ -664,7 +706,7 @@
           .join("")}
       </div>
     
-    <a href="${posts.link}" class="glow-button" target="_blank"
+    <a href="${post.link}" class="glow-button" target="_blank"
     style="
     color: #0cde91;
     text-decoration: none;

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets\img\blog-logos\cinesync-logo.jpg" type="image/x-icon">
+    <title>CineSync: Your Personal Movie Database & Review App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            line-height: 1.6;
+            background-color: #333;
+            color: #fffdfd;
+            padding: 20px;
+        }
+
+        a {
+            color: #112240;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            margin-bottom: 20px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #0cde91;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #0cde91;
+        }
+
+        /* Blog Post Container */
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #000000;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: #0cde91;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+        }
+
+        /* Image Placeholder & Carousel */
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 5px;
+            background: url("assets/img/blog/cine1.JPG") center/contain no-repeat;
+            margin-bottom: 20px;
+        }
+
+        .carousel img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel img.active {
+            opacity: 1;
+        }
+
+        /* Code Snippet Section */
+        .code-snippet {
+            margin-bottom: 30px;
+        }
+
+        .code-snippet h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #c8c8c8;
+        }
+
+        /* Challenges Section */
+        .challenge {
+            background: #333;
+            border-left: 5px solid #0cde91;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .challenge h4 {
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            color: #0cde91;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            color: #b3b3b3;
+        }
+        strong {
+            color: #0cde91;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CineSync: Your Personal Movie Database & Review App</h1>
+        <p>
+            Filter movies, TV shows, and anthologies – add your watched films and
+            thoughts to build lasting memories.
+        </p>
+        <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+    </header>
+
+    <div class="blog-container">
+        <!-- Introduction Section -->
+        <section class="section" id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to my latest blog post about CineSync, a personal movie
+                database app that lets you filter through an extensive list of movies,
+                TV shows, and anthologies. This app not only helps you keep track of
+                what you've watched but also allows you to add your own
+                thoughts—preserving memories for years to come.
+            </p>
+            <div class="carousel" id="intro-carousel">
+                <img class="carousel-image" src="assets/img/blog/cine1.JPG" alt="CineSync Overview" />
+                <img class="carousel-image" src="assets/img/blog/cine2.JPG" alt="Filtering Movies" />
+                <img class="carousel-image" src="assets/img/blog/cine3.JPG" alt="User Reviews" />
+                <img class="carousel-image" src="assets/img/blog/cine4.JPG" alt="Filter Options" />
+                <img class="carousel-image" src="assets/img/blog/cine5.JPG" alt="Watchlist Feature" />
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="section" id="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>
+                    <strong>Comprehensive Movie Database:</strong> Filter movies, TV
+                    shows, and anthologies with ease.
+                </li>
+                <li>
+                    <strong>Personal Watchlist:</strong> Add watched movies along with
+                    your personal reviews and thoughts.
+                </li>
+                <li>
+                    <strong>User-Friendly Interface:</strong> Intuitive design for
+                    seamless navigation and interaction.
+                </li>
+                <li>
+                    <strong>Real-Time Alerts:</strong> Get periodic notifications (every
+                    15 minutes) to keep you engaged with new content.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section class="section" id="tech-stack">
+            <h2>Why These Technologies?</h2>
+            <p>
+                CineSync is built with a powerful tech stack that ensures smooth
+                performance, real-time data synchronization, and a visually engaging
+                experience:
+            </p>
+            <ul>
+                <li>
+                    <strong>Language:</strong> Java for Android development provides
+                    native performance and seamless integration with the Android
+                    ecosystem.
+                </li>
+                <li>
+                    <strong>Database:</strong> Firebase Firestore enables real-time data
+                    updates and scalable storage for user data and movie information.
+                </li>
+                <li>
+                    <strong>APIs:</strong> Integration with the YouTube API, IMDB API,
+                    and Rotten Tomatoes enriches the app with dynamic movie details and
+                    reviews.
+                </li>
+                <li>
+                    <strong>Real-Time Notifications:</strong> Firebase Cloud Messaging
+                    (FCM) ensures users are promptly alerted about new content and
+                    updates.
+                </li>
+                <li>
+                    <strong>UI Library:</strong> MPAndroidChart is used to create
+                    interactive graphs and visualizations, making data insights more
+                    accessible.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Code Snippet Section: Alert System Challenge -->
+        <section class="section" id="code-snippets">
+            <h2>Code Highlight: Concurrent Alert System</h2>
+            <p>
+                One of the challenges I faced was developing a concurrent alert system
+                that sends notifications every 15 minutes. The following snippet
+                demonstrates the core logic behind scheduling these alerts, though
+                background execution remains a work in progress.
+            </p>
+            <div class="code-snippet">
+                <h3>Android Alert Scheduling (Java-code)</h3>
+                <pre>
+AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+Intent intent = new Intent(this, AlertReceiver.class);
+PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
+
+// Schedule alert every 15 minutes
+alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 
+    15 * 60 * 1000, pendingIntent);
+        </pre>
+            </div>
+            <p>
+                <em>Note:</em> The alert system occasionally faces issues with
+                background execution due to OS battery optimizations. I’m actively
+                working on a robust solution to ensure consistent performance.
+            </p>
+        </section>
+
+        <section class="section" id="code-snippets">
+            <h2>Code Highlight: Sorting & Filtering Movies</h2>
+            <p>
+                Below is a valuable code snippet that demonstrates how to sort a list
+                of movies alphabetically by their names and then filter that list
+                based on a search query. This can be particularly useful for creating
+                a searchable, alphabetically ordered movie database in your CineSync
+                app.
+            </p>
+            <div class="code-snippet">
+                <h3>Adding movie filters (Java-code)</h3>
+                <pre>
+            import java.util.ArrayList;
+            import java.util.Collections;
+            import java.util.Comparator;
+            import java.util.List;
+            import java.util.stream.Collectors;
+            
+            // Assume a simple Movie class with a 'name' property
+            public class Movie {
+                private String name;
+                // ... other properties
+            
+                public Movie(String name) {
+                    this.name = name;
+                }
+            
+                public String getName() {
+                    return name;
+                }
+            
+                // Optional: Override toString() for debugging
+                @Override
+                public String toString() {
+                    return name;
+                }
+            }
+            
+            public class MovieFilter {
+                public static void main(String[] args) {
+                    // Sample movie list
+                    List&lt;Movie&gt; movies = new ArrayList&lt;&gt;();
+                    movies.add(new Movie("Inception"));
+                    movies.add(new Movie("Avatar"));
+                    movies.add(new Movie("The Matrix"));
+                    movies.add(new Movie("Interstellar"));
+                    movies.add(new Movie("Avengers: Endgame"));
+            
+                    // 1. Sort the movies alphabetically (case-insensitive)
+                    Collections.sort(movies, new Comparator&lt;Movie&gt;() {
+                        @Override
+                        public int compare(Movie m1, Movie m2) {
+                            return m1.getName().compareToIgnoreCase(m2.getName());
+                        }
+                    });
+            
+                    System.out.println("Sorted Movies:");
+                    movies.forEach(System.out::println);
+            
+                    // 2. Filter movies by a search query (e.g., "av")
+                    String query = "av";
+                    List&lt;Movie&gt; filteredMovies = movies.stream()
+                        .filter(movie -> movie.getName().toLowerCase().contains(query.toLowerCase()))
+                        .collect(Collectors.toList());
+            
+                    System.out.println("\nFiltered Movies (query: \"" + query + "\"):");
+                    filteredMovies.forEach(System.out::println);
+                }
+            }
+            
+        </pre>
+            </div>
+            <strong>Sorting:</strong>
+            <p><li>The code uses <pre>Collections.sort()</pre> with a custom Comparator to compare movie names without considering
+                    letter case.</li>
+                <li>This ensures the list of movies is arranged alphabetically.</li></p>
+
+            <strong>Filtering:</strong>
+            <p>
+                <pre>filter()</pre><li>This method checks if each movie's name contains the given search query (converted to lowercase for case-insensitive matching).</li>
+                <li>The results are collected into a new list <pre>(filteredMovies)</pre></li>
+            </p>
+        </section>
+
+        <section class="section" id="final-thoughts">
+            <h2>Usage in Your App</h2>
+            <p><li><strong>Integration:</strong> Use similar logic in your Android project when you fetch movie data from your database. You can sort the list once the data is loaded and then filter it based on user input from a search bar.</li>
+                <li><strong>Real-Time Search:</strong> Combine this with an EditText listener to update the filtered list as the user types, ensuring a dynamic and responsive search experience.</li></p>
+        </section>
+
+        <!-- Challenges Section -->
+        <section class="section" id="challenges">
+            <h2>Challenges & Ongoing Improvements</h2>
+            <div class="challenge">
+                <h4>Concurrent Alert System</h4>
+                <p>
+                    Implementing a concurrent alert system that triggers every 15
+                    minutes proved challenging. Background duties on mobile devices can
+                    interfere with scheduled tasks, leading to inconsistent
+                    notifications. While the basic logic works, intermittent issues
+                    still occur during background operation. I’m currently exploring
+                    alternative solutions, such as using WorkManager for more reliable
+                    background processing.
+                </p>
+            </div>
+        </section>
+
+        <!-- Final Thoughts Section -->
+        <section class="section" id="final-thoughts">
+            <h2>Final Thoughts</h2>
+            <p>
+                CineSync is a personal project that blends the best of movie database
+                management and user-generated reviews. Despite challenges with the
+                concurrent alert system, the overall app provides a unique and
+                engaging experience for movie enthusiasts. I’m continuously working on
+                improvements to ensure a seamless user experience.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tharindu. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Synchronized Carousel Effect Across All Carousels -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousels = document.querySelectorAll(".carousel");
+            let index = 0;
+
+            function showNextImage() {
+                carousels.forEach((carousel) => {
+                    const images = carousel.querySelectorAll(".carousel-image");
+                    images.forEach((img) => img.classList.remove("active"));
+                    if (images.length) {
+                        images[index].classList.add("active");
+                    }
+                });
+                // Assume each carousel has the same number of images
+                index =
+                    (index + 1) %
+                    carousels[0].querySelectorAll(".carousel-image").length;
+            }
+
+            // Initialize first image for all carousels
+            carousels.forEach((carousel) => {
+                const images = carousel.querySelectorAll(".carousel-image");
+                if (images.length) images[0].classList.add("active");
+            });
+
+            // Change image every 3 seconds for all carousels
+            setInterval(showNextImage, 3000);
+        });
+    </script>
+</body>
+
+</html>

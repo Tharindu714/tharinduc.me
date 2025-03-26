@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets\img\blog-logos\tt_hms.png" type="image/x-icon">
+    <title>Tranquil Terrace HMS: A Comprehensive Hotel Management System</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            line-height: 1.6;
+            background-color: #333;
+            color: #fffdfd;
+            padding: 20px;
+        }
+
+        a {
+            color: #112240;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            margin-bottom: 20px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #0cde91;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #0cde91;
+        }
+
+        /* Blog Post Container */
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #000000;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: #0cde91;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+        }
+
+        /* Image Placeholder & Carousel */
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 5px;
+            background: url("assets/img/blog/hms_default.jpg") center/contain no-repeat;
+            margin-bottom: 20px;
+        }
+
+        .carousel img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel img.active {
+            opacity: 1;
+        }
+
+        /* Code Snippet Section */
+        .code-snippet {
+            margin-bottom: 30px;
+        }
+
+        .code-snippet h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #c8c8c8;
+        }
+
+        /* Challenges Section */
+        .challenge {
+            background: #333;
+            border-left: 5px solid #0cde91;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .challenge h4 {
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            color: #0cde91;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            color: #b3b3b3;
+        }
+
+        strong {
+            color: #0cde91;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tranquil Terrace HMS</h1>
+        <p>
+            A robust Hotel Management System designed for Tranquil Terrace,
+            streamlining operations across all departments.
+        </p>
+        <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+    </header>
+
+    <div class="blog-container">
+        <!-- Introduction Section -->
+        <section class="section" id="introduction">
+            <h2>Latest HMS</h2>
+            <p>
+                Tranquil Terrace HMS is a large-scale hotel management solution built
+                using Java and MySQL. Developed as a group project, this system
+                manages reservations, guest check-ins/outs, billing, and employee
+                schedules across multiple departments, such as Administration, HR,
+                Front Office, and Kitchen.
+            </p>
+            <div class="carousel" id="intro-carousel">
+                <img class="carousel-image" src="assets/img/blog/hms1.png" alt="Hotel Overview" />
+                <img class="carousel-image" src="assets/img/blog/hms2.png" alt="Dashboard Interface" />
+                <img class="carousel-image" src="assets/img/blog/hms3.png" alt="Employee Management" />
+                <img class="carousel-image" src="assets/img/blog/hms4.png" alt="Employee Management" />
+                <img class="carousel-image" src="assets/img/blog/hms5.png" alt="Employee Management" />
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section class="section" id="tech-stack">
+            <h2>Why Java & MySQL?</h2>
+            <p>
+                For Tranquil Terrace HMS, the decision to use Java and MySQL was
+                driven by the need for a robust, scalable, and secure system. Here’s
+                why:
+            </p>
+            <ul>
+                <li>
+                    <strong>Java:</strong> Offers platform independence, robust
+                    performance, and a vast ecosystem of libraries—ideal for developing
+                    the core business logic and managing complex processes in a hotel
+                    environment.
+                </li>
+                <li>
+                    <strong>MySQL:</strong> Provides reliable, efficient, and scalable
+                    relational database management, making it perfect for handling all
+                    transactional data, such as reservations, billing, and employee
+                    records.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Code Snippet Section: JDBC Database Connection -->
+        <section class="section" id="code-snippets">
+            <h2>Code Highlight: JDBC Database Connection</h2>
+            <p>
+                One of the critical aspects of the system is establishing a secure
+                connection to the MySQL database using JDBC. Below is a sample code
+                snippet for connecting to the database:
+            </p>
+            <div class="code-snippet">
+                <h3>Java Code: Connecting to MySQL with JDBC</h3>
+                <pre>
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseConnection {
+    private static final String URL = "jdbc:mysql://localhost:3306/tranquil_terrace";
+    private static final String USER = "db_username";
+    private static final String PASSWORD = "db_password";
+
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+}
+        </pre>
+            </div>
+            <p>
+                This snippet demonstrates how to use JDBC to connect to a MySQL
+                database. The connection parameters are defined as constants, and the
+                <code>getConnection()</code> method returns a live connection to the
+                database.
+            </p>
+        </section>
+
+        <section class="section" id="reservation-management">
+            <h2>Code Highlight: Reservation Management</h2>
+            <p>
+                Efficient reservation management is at the heart of the HMS. Below is
+                a code snippet that sorts reservations alphabetically by room number
+                and filters them based on customer name:
+            </p>
+            <div class="code-snippet">
+                <h3>Java Code: Sorting and Filtering Reservations</h3>
+                <pre>
+List&lt;Reservation&gt; sortedReservations = reservations.stream()
+    .sorted(Comparator.comparing(Reservation::getRoomNumber))
+    .collect(Collectors.toList());
+
+String searchQuery = "Deluxe";
+List&lt;Reservation&gt; filteredReservations = sortedReservations.stream()
+    .filter(r -&gt; r.getCustomerName().toLowerCase().contains(searchQuery.toLowerCase()))
+    .collect(Collectors.toList());
+        </pre>
+            </div>
+            <p>
+                This code utilizes Java Streams to sort the list of reservations by
+                room number and then filter it by matching the customer's name. This
+                makes it easier for hotel staff to quickly access specific reservation
+                data.
+            </p>
+        </section>
+
+        <section class="section" id="reservation-management">
+            <h2>Code Highlight: Demonstrates how face capture is implemented</h2>
+            <p>
+                <strong>VideoCapture Initialization:</strong>
+                <li>
+                    The code creates a new VideoCapture object to access the default
+                    webcam.
+                </li>
+                <strong>Frame Capture:</strong>
+                <li>
+                    It attempts to read a frame from the camera. If successful, it
+                    proceeds to write the captured frame to a JPG file using the
+                    employee's ID as part of the filename.
+                </li>
+                <strong>Feedback & Resource Management:</strong>
+                <li>
+                    The user is informed via a dialog whether the capture was
+                    successful, and the camera resource is released after the operation.
+                </li>
+            </p>
+            <div class="code-snippet">
+                <h3>Java Code: Face Verification Process</h3>
+                <pre>
+            // Method to capture employee face image using OpenCV
+            private void captureEmployeeFace(String employeeId) {
+                // Initialize the camera (device index 0 is usually the default webcam)
+                VideoCapture camera = new VideoCapture(0);
+                if (!camera.isOpened()) {
+                    JOptionPane.showMessageDialog(this, "Camera not found! Please ensure a webcam is connected.");
+                    return;
+                }
+
+                Mat frame = new Mat();
+                // Attempt to read a frame from the camera
+                if (camera.read(frame)) {
+                    // Define the output file path (you could also store this in a database)
+                    String filename = "employee_faces/" + employeeId + ".jpg";
+                    // Write the captured frame to file in JPG format
+                    Imgcodecs.imwrite(filename, frame);
+                    JOptionPane.showMessageDialog(this, "Face captured successfully and saved as " + filename);
+                } else {
+                    JOptionPane.showMessageDialog(this, "Failed to capture face image. Please try again.");
+                }
+                
+                // Release the camera resource
+                camera.release();
+            }
+        </pre>
+            </div>
+            <p>
+                This snippet should provide your readers with a clear understanding of
+                one of the advanced features in your HMS and how you tackled the
+                challenge of integrating face capture using Java and OpenCV.
+            </p>
+        </section>
+
+        <section class="section" id="reservation-management">
+            <h2>Code Highlight: Refreshing the HR Data Table</h2>
+            <p>
+                This snippet demonstrates how the admin panel retrieves and refreshes
+                HR data from the MySQL database to update the GUI table dynamically.
+            </p>
+            <div class="code-snippet">
+                <h3>Java Code: Exception handling and the use of a utility</h3>
+                <pre>
+            private void refreshHRData() {
+                try {
+                    Connection conn = DatabaseConnection.getConnection();
+                    String sql = "SELECT * FROM hr_department";
+                    PreparedStatement pst = conn.prepareStatement(sql);
+                    ResultSet rs = pst.executeQuery();
+                    // Assuming hrTable is your JTable and DbUtils is a helper library
+                    hrTable.setModel(DbUtils.resultSetToTableModel(rs));
+                } catch (SQLException e) {
+                    JOptionPane.showMessageDialog(this, "Error refreshing HR data: " + e.getMessage());
+                    e.printStackTrace();
+                }
+            }            
+          </pre>
+            </div>
+            <p>
+                This code ensures that HR data is fetched from the database and
+                immediately reflected in the admin panel's table, facilitating
+                real-time updates and efficient management.
+            </p>
+        </section>
+
+        <section class="section" id="reservation-management">
+            <h2>Code Highlight: Logout Action Handler</h2>
+            <p>
+                This snippet shows the event handler for the logout button. It prompts
+                the admin with a confirmation dialog before closing the current admin
+                panel and redirecting back to the login screen.
+            </p>
+            <div class="code-snippet">
+                <h3>Java Code: Logout Action Handler</h3>
+                <pre>
+            private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {                                         
+                int confirm = JOptionPane.showConfirmDialog(this, 
+                    "Are you sure you want to logout?", "Logout Confirmation", 
+                    JOptionPane.YES_NO_OPTION);
+                if (confirm == JOptionPane.YES_OPTION) {
+                    // Close the current admin panel
+                    this.dispose();
+                    // Redirect to the login screen
+                    new LoginFrame().setVisible(true);
+                }
+            }              
+          </pre>
+            </div>
+            <p>
+                This snippet emphasizes user confirmation and clean resource
+                management by disposing of the current frame before opening the login
+                screen, ensuring a smooth user experience.
+            </p>
+        </section>
+
+        <section class="section" id="reservation-management">
+            <h2>Code Highlight: Loading Employee Attendance Data</h2>
+            <p>
+                This snippet demonstrates how the HR dashboard connects to the MySQL
+                database, retrieves employee attendance records, and updates the
+                display table.
+            </p>
+            <div class="code-snippet">
+                <h3>
+                    Java Code: Utility (like DbUtils) to convert the ResultSet into a
+                    table model
+                </h3>
+                <pre>
+            private void loadEmployeeAttendance() {
+                try {
+                    Connection conn = DatabaseConnection.getConnection();
+                    String sql = "SELECT * FROM employee_attendance";
+                    PreparedStatement pst = conn.prepareStatement(sql);
+                    ResultSet rs = pst.executeQuery();
+                    // Update the HR table with fetched data
+                    hrTable.setModel(DbUtils.resultSetToTableModel(rs));
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(this, "Error loading attendance data: " + ex.getMessage());
+                    ex.printStackTrace();
+                }
+            }                          
+          </pre>
+            </div>
+            <p>
+                This code snippet ensures that HR attendance data is dynamically
+                loaded into the dashboard, providing real-time insights for HR
+                management.
+            </p>
+        </section>
+
+        <section class="section" id="reservation-management">
+            <h2>Code Highlight: Dynamic Employee Search Functionality</h2>
+            <p>
+                This snippet illustrates how to filter HR records based on a search
+                query. The method uses a parameterized SQL query to search for
+                employees whose names contain the search term (case-insensitive), then
+                updates the table with the filtered results.
+            </p>
+            <div class="code-snippet">
+                <h3>Java Code: Parameterized SQL query to search for employees</h3>
+                <pre>
+            private void searchEmployee(String searchText) {
+                try {
+                    Connection conn = DatabaseConnection.getConnection();
+                    String sql = "SELECT * FROM hr_department WHERE LOWER(employee_name) LIKE ?";
+                    PreparedStatement pst = conn.prepareStatement(sql);
+                    pst.setString(1, "%" + searchText.toLowerCase() + "%");
+                    ResultSet rs = pst.executeQuery();
+                    // Update the HR table with the search results
+                    hrTable.setModel(DbUtils.resultSetToTableModel(rs));
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(this, "Search error: " + ex.getMessage());
+                    ex.printStackTrace();
+                }
+            }                                      
+          </pre>
+            </div>
+            <p>
+                This code snippet ensures that HR attendance data is dynamically
+                loaded into the dashboard, providing real-time insights for HR
+                management.
+            </p>
+        </section>
+        <!-- Challenges Section -->
+        <section class="section" id="challenges">
+            <h2>Challenges & Ongoing Improvements</h2>
+            <div class="challenge">
+                <h4>Concurrent Alert System for Periodic Notifications</h4>
+                <p>
+                    A major challenge was implementing a concurrent alert system that
+                    dispatches notifications every 15 minutes. Due to background
+                    processing limitations on mobile devices, the alert mechanism
+                    sometimes fails to trigger reliably. Although the AlarmManager-based
+                    approach works well in the foreground, background execution remains
+                    inconsistent. I’m currently investigating alternative strategies,
+                    such as integrating WorkManager, to improve reliability.
+                </p>
+            </div>
+        </section>
+
+        <!-- Final Thoughts Section -->
+        <section class="section" id="final-thoughts">
+            <h2>Final Thoughts</h2>
+            <p>
+                Tranquil Terrace HMS is a comprehensive solution that demonstrates the
+                power of Java and MySQL in creating robust enterprise applications.
+                The system streamlines hotel operations, offering features that
+                enhance both efficiency and user experience. While challenges such as
+                background notification reliability persist, ongoing improvements will
+                further optimize performance and reliability.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>
+            &copy; 2025 Delta Codex Software Solutions | Developed by Tharindu
+            Chanaka and Team
+        </p>
+    </footer>
+
+    <!-- JavaScript for Synchronized Carousel Effect Across All Carousels -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousels = document.querySelectorAll(".carousel");
+            let index = 0;
+
+            function showNextImage() {
+                carousels.forEach((carousel) => {
+                    const images = carousel.querySelectorAll(".carousel-image");
+                    images.forEach((img) => img.classList.remove("active"));
+                    if (images.length) {
+                        images[index].classList.add("active");
+                    }
+                });
+                index =
+                    (index + 1) %
+                    carousels[0].querySelectorAll(".carousel-image").length;
+            }
+
+            // Initialize first image for all carousels
+            carousels.forEach((carousel) => {
+                const images = carousel.querySelectorAll(".carousel-image");
+                if (images.length) images[0].classList.add("active");
+            });
+
+            // Change image every 3 seconds for all carousels
+            setInterval(showNextImage, 3000);
+        });
+    </script>
+</body>
+
+</html>

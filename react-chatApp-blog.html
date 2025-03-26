@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets\img\blog-logos\supechat.png" type="image/x-icon">
+    <title>React Native Chat App: Bridging Real-Time Communication</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            line-height: 1.6;
+            background-color: #333;
+            color: #fffdfd;
+            padding: 20px;
+        }
+
+        a {
+            color: #112240;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            margin-bottom: 20px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #0cde91;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #0cde91;
+        }
+
+        /* Blog Post Container */
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #000000;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: #0cde91;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+        }
+
+        /* Code Snippet Section */
+        .code-snippet {
+            margin-bottom: 30px;
+        }
+
+        .code-snippet h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #c8c8c8;
+        }
+
+        /* Challenges Section */
+        .challenge {
+            background: #333;
+            border-left: 5px solid #0cde91;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .challenge h4 {
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            color: #0cde91;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            color: #b3b3b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>React Native Chat App</h1>
+        <p>Real-time messaging using React Native on the frontend and Java with MySQL on the backend</p>
+        <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+    </header>
+
+    <div class="blog-container">
+        <!-- Introduction Section -->
+        <section class="section" id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                In this post, I discuss the development of a React Native Chat App. The app is designed to provide
+                seamless, real-time messaging by leveraging a robust backend built with Java and MySQL. It also
+                integrates ngrok for testing remote connections.
+            </p>
+        </section>
+
+        <!-- Frontend Code Snippets -->
+        <section class="section" id="frontend">
+            <h2>Frontend Implementations</h2>
+            <p>
+                The frontend, built with React Native, provides a smooth user experience for chatting. Here are two
+                valuable code snippets:
+            </p>
+            <div class="code-snippet">
+                <h3>1. Rendering Chat Messages</h3>
+                <pre>
+                    {`// ChatMessages.js - Renders the list of chat messages
+                    import React from 'react';
+                    import { View, Text, FlatList, StyleSheet } from 'react-native';
+                    
+                    const ChatMessages = ({ messages }) => {
+                      return (
+                        &lt;FlatList
+                          data={messages}
+                          keyExtractor={(item) =&gt; item.id.toString()}
+                          renderItem={({ item }) =&gt; (
+                            &lt;View style={styles.messageContainer}&gt;
+                              &lt;Text style={styles.sender}&gt;{item.sender}&lt;/Text&gt;
+                              &lt;Text style={styles.message}&gt;{item.message}&lt;/Text&gt;
+                            &lt;/View&gt;
+                          )}
+                        /&gt;
+                      );
+                    };
+                    
+                    const styles = StyleSheet.create({
+                      messageContainer: { padding: 10, marginVertical: 5, backgroundColor: '#0cde91', borderRadius: 5 },
+                      sender: { fontWeight: 'bold', color: '#333' },
+                      message: { color: '#fff' },
+                    });
+                    
+                    export default ChatMessages;`}
+                    </pre>
+
+            </div>
+            <div class="code-snippet">
+                <h3>2. Ngrok Integration for Remote Testing</h3>
+                <pre>
+{`// Config.js - Example configuration for ngrok usage in development
+const API_URL = __DEV__ 
+  ? 'http://<ngrok_subdomain>.ngrok.io' 
+  : 'https://productionserver.com';
+
+export default {
+  API_URL,
+};
+`}
+        </pre>
+            </div>
+            <p>
+                <strong>Note:</strong> Ngrok is used during development to expose your local server to the internet.
+                However, you may encounter issues where the connection drops intermittently. One common solution is to
+                upgrade your ngrok plan or implement automatic reconnection logic in your app.
+            </p>
+        </section>
+
+        <!-- Backend Code Snippets -->
+        <section class="section" id="backend">
+            <h2>Backend Implementations</h2>
+            <p>
+                The backend, implemented in Java with a MySQL database, powers the real-time chat functionality. Here
+                are three key code snippets:
+            </p>
+            <div class="code-snippet">
+                <h3>1. Handling Chat Message Transmission</h3>
+                <pre>
+{`// ChatController.java - Handles incoming chat messages
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import com.google.gson.Gson;
+
+public class ChatController extends HttpServlet {
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    BufferedReader reader = request.getReader();
+    ChatMessage message = new Gson().fromJson(reader, ChatMessage.class);
+    // Save message to database (using DAO pattern)
+    boolean success = ChatDAO.saveMessage(message);
+    response.getWriter().write(success ? "Message saved" : "Error saving message");
+  }
+}
+`}
+        </pre>
+            </div>
+            <div class="code-snippet">
+                <h3>2. Retrieving Chat History</h3>
+                <pre>
+{`// ChatDAO.java - Data access object for chat messages
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ChatDAO {
+  public static List<ChatMessage> getChatHistory() {
+    List&lt;ChatMessage&gt; messages = new ArrayList&lt;&gt;();
+    try (Connection conn = DatabaseConnection.getConnection();
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery("SELECT * FROM chat_messages ORDER BY timestamp ASC")) {
+      while (rs.next()) {
+        ChatMessage msg = new ChatMessage();
+        msg.setId(rs.getInt("id"));
+        msg.setSender(rs.getString("sender"));
+        msg.setMessage(rs.getString("message"));
+        msg.setTimestamp(rs.getTimestamp("timestamp"));
+        messages.add(msg);
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return messages;
+  }
+}
+`}
+        </pre>
+            </div>
+            <div class="code-snippet">
+                <h3>3. User Authentication and Session Management</h3>
+                <pre>
+{`// AuthController.java - Handles user login and session creation
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import com.google.gson.Gson;
+
+public class AuthController extends HttpServlet {
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    BufferedReader reader = request.getReader();
+    User user = new Gson().fromJson(reader, User.class);
+    // Validate user credentials
+    if (UserDAO.validateUser(user)) {
+      HttpSession session = request.getSession();
+      session.setAttribute("user", user);
+      response.getWriter().write("Login successful");
+    } else {
+      response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid credentials");
+    }
+  }
+}
+`}
+        </pre>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section class="section" id="challenges">
+            <h2>Challenges & Solutions</h2>
+            <div class="challenge">
+                <h4>Ngrok Connection Loss</h4>
+                <p>
+                    One persistent challenge during development was dealing with intermittent ngrok connection losses.
+                    This often disrupted frontend-backend communication during testing. After researching, I discovered
+                    that these issues were common with free-tier ngrok sessions. While upgrading the ngrok plan could
+                    help, I am also exploring implementing automatic reconnection logic in the app to mitigate
+                    disruptions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Final Thoughts Section -->
+        <section class="section" id="final-thoughts">
+            <h2>Final Thoughts</h2>
+            <p>
+                This React Native Chat App is a testament to combining modern mobile development with a robust
+                Java-MySQL backend. By integrating real-time messaging and handling challenges such as ngrok connection
+                drops, the project showcases practical solutions to common issues in full-stack development. Stay tuned
+                for more insights and updates on future improvements!
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tharindu Chanaka | All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
