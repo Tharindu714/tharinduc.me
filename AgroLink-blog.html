@@ -1,247 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets\img\blog-logos\agroLink.png" type="image/x-icon">
-    <title>AgroLink Blog Post – Smart IoT Monitoring for Agriculture</title>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      /* Reset & Base Styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets\img\blog-logos\agroLink.png" type="image/x-icon">
+  <title>AgroLink Blog Post – Smart IoT Monitoring for Agriculture</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      line-height: 1.6;
+      background-color: #333;
+      color: #fffdfd;
+      padding: 20px;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+      font-family: Consolas, monospace;
+      margin-bottom: 20px;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #0cde91;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ffffff;
+    }
+
+    /* Blog Post Container */
+    .blog-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #000000;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 1.8em;
+      color: #0cde91;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 5px;
+    }
+
+    .section p {
+      margin-bottom: 15px;
+    }
+
+    /* Image Placeholder Styles */
+    .image-placeholder {
+      background-color: #333;
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      color: #dadada;
+      border: 2px dashed #bbb;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    /* Code Snippet Section */
+    .code-snippet {
+      margin-bottom: 30px;
+    }
+
+    .code-snippet h3 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #c8c8c8;
+    }
+
+    /* Challenges Section */
+    .challenge {
+      background: #333;
+      border-left: 5px solid #0cde91;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .challenge h4 {
+      margin-bottom: 8px;
+      font-size: 1.2em;
+      color: #0cde91;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid #ddd;
+      color: #b3b3b3;
+    }
+
+    strong {
+      color: #0cde91;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: transparent;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #0cde91;
+    }
+
+    .save-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: transparent;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .save-btn:hover {
+      background-color: #de0c56;
+    }
+
+    @media print {
       body {
-        font-family: "Roboto", sans-serif;
-        line-height: 1.6;
-        background-color: #333;
-        color: #fffdfd;
-        padding: 20px;
-      }
-      a {
-        color: #112240;
-        text-decoration: none;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      pre {
-        background: #272822;
-        color: #f8f8f2;
-        padding: 15px;
-        overflow-x: auto;
-        border-radius: 5px;
-        font-family: Consolas, monospace;
-        margin-bottom: 20px;
-      }
-      code {
-        font-family: Consolas, monospace;
-      }
-      /* Header */
-      header {
-        text-align: center;
-        padding-bottom: 20px;
-        border-bottom: 2px solid #ddd;
-        margin-bottom: 30px;
-      }
-      header h1 {
-        font-size: 2.5em;
-        color: #0cde91;
-        margin-bottom: 10px;
-      }
-      header p {
-        font-size: 1.2em;
-        color: #ffffff;
-      }
-      /* Blog Post Container */
-      .blog-container {
-        max-width: 900px;
-        margin: 0 auto;
-        background: #000000;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .section {
-        margin-bottom: 40px;
-      }
-      .section h2 {
-        font-size: 1.8em;
-        color: #0cde91;
-        margin-bottom: 15px;
-        border-bottom: 2px solid #ffffff;
-        padding-bottom: 5px;
-      }
-      .section p {
-        margin-bottom: 15px;
-      }
-      /* Image Placeholder Styles */
-      .image-placeholder {
-        background-color: #333;
-        width: 100%;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5em;
-        color: #dadada;
-        border: 2px dashed #bbb;
-        border-radius: 5px;
-        margin-bottom: 20px;
-      }
-      /* Code Snippet Section */
-      .code-snippet {
-        margin-bottom: 30px;
-      }
-      .code-snippet h3 {
-        font-size: 1.4em;
-        margin-bottom: 10px;
-        color: #c8c8c8;
-      }
-      /* Challenges Section */
-      .challenge {
-        background: #333;
-        border-left: 5px solid #0cde91;
-        padding: 15px 20px;
-        margin-bottom: 20px;
-        border-radius: 4px;
-      }
-      .challenge h4 {
-        margin-bottom: 8px;
-        font-size: 1.2em;
-        color: #0cde91;
-      }
-      /* Footer */
-      footer {
-        text-align: center;
-        margin-top: 40px;
-        padding-top: 20px;
-        border-top: 2px solid #ddd;
-        color: #b3b3b3;
-      }
-      strong {
-        color: #0cde91;
-        text-decoration: underline;
-        cursor: pointer;
+        visibility: visible;
       }
 
-      .back-button {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 15px;
-        background-color: transparent;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background 0.3s;
+      .no-print {
+        display: none;
+        /* Hide elements that should not be printed */
       }
+    }
+  </style>
+</head>
 
-      .back-button:hover {
-        background-color: #0cde91;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>AgroLink: Smart IoT Monitoring System for Agriculture</h1>
+<body>
+  <header>
+    <h1>AgroLink: Smart IoT Monitoring System for Agriculture</h1>
+    <p>
+      A comprehensive look into an IoT solution using C++, Java, and React.js
+    </p>
+    <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+    <a class="save-btn" onclick="window.print()">📥 Save as a PDF</a>
+  </header>
+
+  <div class="blog-container">
+    <!-- Project Description -->
+    <section class="section" id="project-description">
+      <h2>Project Description</h2>
       <p>
-        A comprehensive look into an IoT solution using C++, Java, and React.js
+        “AgroLink” is an IoT project designed to address critical issues in
+        tea factories by replacing traditional measurement methods with a
+        Smart Monitor. Developed using cutting-edge technologies – C++ for IoT
+        configurations, Java for mobile app backend processes, React.js for
+        the mobile app frontend, and MySQL for database management – this
+        system delivers over 90% accuracy in monitoring temperature, humidity,
+        and soil moisture. The sensor values are logged locally every 30
+        seconds, and the mobile application provides a real-time graphical
+        overview of these environmental parameters.
       </p>
-      <a href="index.html#blogs" class="back-button">← See more Blogs</a>
-    </header>
+      <!-- Image: Circuit Diagram Placeholder -->
+      <div class="image-placeholder">
+        <img src="assets\img\blog\agroLink1.jpg" alt="Circuit Diagram Placeholder" srcset="" />
+      </div>
+      <p>
+        The visual above represents the designed circuit diagram for AgroLink.
+        It illustrates the connectivity between sensors and the
+        microcontroller.
+      </p>
+      <!-- Image: Physical Structure Placeholder -->
+      <div class="image-placeholder">
+        <img src="assets\img\blog\agroLink2.jpg" alt="Physical Structure Placeholder" srcset="" />
+      </div>
+      <p>
+        This image visually represents the AgroLink IoT System, an advanced
+        smart monitoring solution for agriculture. The diagram illustrates how
+        soil moisture data is collected from the plant, processed by the
+        AgroLink device, and transmitted to a Java EE & MySQL-based backend.
+        The processed data is then displayed on a mobile application,
+        providing real-time insights on soil conditions such as moisture,
+        humidity, and temperature. This system enhances precision agriculture
+        by helping farmers monitor and manage soil conditions efficiently.
+        🚀🌱
+      </p>
+    </section>
 
-    <div class="blog-container">
-      <!-- Project Description -->
-      <section class="section" id="project-description">
-        <h2>Project Description</h2>
-        <p>
-          “AgroLink” is an IoT project designed to address critical issues in
-          tea factories by replacing traditional measurement methods with a
-          Smart Monitor. Developed using cutting-edge technologies – C++ for IoT
-          configurations, Java for mobile app backend processes, React.js for
-          the mobile app frontend, and MySQL for database management – this
-          system delivers over 90% accuracy in monitoring temperature, humidity,
-          and soil moisture. The sensor values are logged locally every 30
-          seconds, and the mobile application provides a real-time graphical
-          overview of these environmental parameters.
-        </p>
-        <!-- Image: Circuit Diagram Placeholder -->
-        <div class="image-placeholder">
-          <img
-            src="assets\img\blog\agroLink1.jpg"
-            alt="Circuit Diagram Placeholder"
-            srcset=""
-          />
-        </div>
-        <p>
-          The visual above represents the designed circuit diagram for AgroLink.
-          It illustrates the connectivity between sensors and the
-          microcontroller.
-        </p>
-        <!-- Image: Physical Structure Placeholder -->
-        <div class="image-placeholder">
-          <img
-            src="assets\img\blog\agroLink2.jpg"
-            alt="Physical Structure Placeholder"
-            srcset=""
-          />
-        </div>
-        <p>
-          This image visually represents the AgroLink IoT System, an advanced
-          smart monitoring solution for agriculture. The diagram illustrates how
-          soil moisture data is collected from the plant, processed by the
-          AgroLink device, and transmitted to a Java EE & MySQL-based backend.
-          The processed data is then displayed on a mobile application,
-          providing real-time insights on soil conditions such as moisture,
-          humidity, and temperature. This system enhances precision agriculture
-          by helping farmers monitor and manage soil conditions efficiently.
-          🚀🌱
-        </p>
-      </section>
+    <!-- Technology Stack Explanation -->
+    <section class="section" id="tech-stack">
+      <h2>Why C++, Java & React.js?</h2>
+      <p>
+        Since AgroLink involves real-time sensor data processing, backend
+        logic, and a user-friendly interface, the following technologies were
+        chosen:
+      </p>
+      <ul>
+        <li>
+          <strong>C++ for IoT Configurations:</strong> Provides low-level
+          hardware access, high performance, and real-time processing
+          essential for collecting sensor data every 30 seconds.
+        </li>
+        <li>
+          <strong>Java for Mobile App Backend:</strong> Ensures robust,
+          scalable, and secure handling of multiple user requests while
+          interfacing seamlessly with MySQL.
+        </li>
+        <li>
+          <strong>React.js for Mobile App Frontend:</strong> Delivers a fast
+          and responsive UI with real-time data visualization, making complex
+          data trends easy to understand.
+        </li>
+      </ul>
+    </section>
 
-      <!-- Technology Stack Explanation -->
-      <section class="section" id="tech-stack">
-        <h2>Why C++, Java & React.js?</h2>
-        <p>
-          Since AgroLink involves real-time sensor data processing, backend
-          logic, and a user-friendly interface, the following technologies were
-          chosen:
-        </p>
-        <ul>
-          <li>
-            <strong>C++ for IoT Configurations:</strong> Provides low-level
-            hardware access, high performance, and real-time processing
-            essential for collecting sensor data every 30 seconds.
-          </li>
-          <li>
-            <strong>Java for Mobile App Backend:</strong> Ensures robust,
-            scalable, and secure handling of multiple user requests while
-            interfacing seamlessly with MySQL.
-          </li>
-          <li>
-            <strong>React.js for Mobile App Frontend:</strong> Delivers a fast
-            and responsive UI with real-time data visualization, making complex
-            data trends easy to understand.
-          </li>
-        </ul>
-      </section>
+    <!-- Code Snippets Section -->
+    <section class="section" id="code-snippets">
+      <h2>Valuable Code Snippets</h2>
 
-      <!-- Code Snippets Section -->
-      <section class="section" id="code-snippets">
-        <h2>Valuable Code Snippets</h2>
-
-        <!-- C++ Code Snippet -->
-        <div class="code-snippet">
-          <h3>C++ Code (ESP32: Sensor Data Collection)</h3>
-          <pre>
+      <!-- C++ Code Snippet -->
+      <div class="code-snippet">
+        <h3>C++ Code (ESP32: Sensor Data Collection)</h3>
+        <pre>
 #include &lt;WiFi.h&gt;
 #include &lt;HTTPClient.h&gt;
 #include &lt;DHT.h&gt;
@@ -287,14 +326,13 @@ void loop() {
   }
   delay(30000); // Send data every 30 seconds
 }
-        </pre
-          >
-        </div>
+        </pre>
+      </div>
 
-        <!-- Java Code Snippet -->
-        <div class="code-snippet">
-          <h3>Java Backend (Servlet to Store Sensor Data)</h3>
-          <pre>
+      <!-- Java Code Snippet -->
+      <div class="code-snippet">
+        <h3>Java Backend (Servlet to Store Sensor Data)</h3>
+        <pre>
 @WebServlet("/api/sensordata")
 public class SensorDataServlet extends HttpServlet {
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -318,14 +356,13 @@ public class SensorDataServlet extends HttpServlet {
     }
   }
 }
-        </pre
-          >
-        </div>
+        </pre>
+      </div>
 
-        <!-- React.js Code Snippet -->
-        <div class="code-snippet">
-          <h3>React.js (Displaying Real-Time Sensor Data)</h3>
-          <pre>
+      <!-- React.js Code Snippet -->
+      <div class="code-snippet">
+        <h3>React.js (Displaying Real-Time Sensor Data)</h3>
+        <pre>
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 
@@ -370,14 +407,13 @@ const SensorDataChart = () => {
 };
 
 export default SensorDataChart;
-        </pre
-          >
-        </div>
+        </pre>
+      </div>
 
-        <!-- MySQL Table Structure -->
-        <div class="code-snippet">
-          <h3>MySQL Table Structure for Sensor Data</h3>
-          <pre>
+      <!-- MySQL Table Structure -->
+      <div class="code-snippet">
+        <h3>MySQL Table Structure for Sensor Data</h3>
+        <pre>
 CREATE TABLE sensordata (
   id INT AUTO_INCREMENT PRIMARY KEY,
   temperature FLOAT NOT NULL DEFAULT 0,
@@ -385,59 +421,65 @@ CREATE TABLE sensordata (
   soilMoisture INT NOT NULL DEFAULT 0,
   timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-        </pre
-          >
-        </div>
-      </section>
+        </pre>
+      </div>
+    </section>
 
-      <!-- Challenges & Solutions Section -->
-      <section class="section" id="challenges">
-        <h2>Challenges Encountered & How I Overcame Them</h2>
+    <!-- Challenges & Solutions Section -->
+    <section class="section" id="challenges">
+      <h2>Challenges Encountered & How I Overcame Them</h2>
 
-        <!-- Challenge 1 -->
-        <div class="challenge">
-          <h4>1. Handling Backend-Frontend Communication Issues with Ngrok</h4>
-          <p>
-            Initially, I used Ngrok to tunnel between the backend and frontend.
-            However, frequent disconnections due to session timeouts and
-            limitations of the free tier caused instability in the system. After
-            extensive research and troubleshooting, I replaced Ngrok with my
-            default network gateway for direct backend communication.
-            Additionally, upgrading to a more powerful laptop helped manage
-            resource-intensive applications like Android Studio.
-          </p>
-        </div>
-
-        <!-- Challenge 2 -->
-        <div class="challenge">
-          <h4>2. Dynamic Wi-Fi Credentials Management in IoT Devices</h4>
-          <p>
-            During testing, hardcoded Wi-Fi credentials meant that any network
-            change required reprogramming the ESP32, a time-consuming process
-            that could affect device longevity. I resolved this by implementing
-            a Wi-Fi provisioning system that allows dynamic configuration via a
-            web interface, eliminating the need for frequent firmware updates.
-          </p>
-        </div>
-      </section>
-
-      <!-- Final Thoughts -->
-      <section class="section" id="final-thoughts">
-        <h2>Final Thoughts</h2>
+      <!-- Challenge 1 -->
+      <div class="challenge">
+        <h4>1. Handling Backend-Frontend Communication Issues with Ngrok</h4>
         <p>
-          Every development process comes with its challenges, and overcoming
-          them is what makes the project robust and future-proof. By addressing
-          connection stability and dynamic configuration issues, AgroLink
-          evolved into a reliable and efficient system for both industrial and
-          home environments. These experiences have not only strengthened my
-          problem-solving skills but also paved the way for innovative solutions
-          in future IoT projects.
+          Initially, I used Ngrok to tunnel between the backend and frontend.
+          However, frequent disconnections due to session timeouts and
+          limitations of the free tier caused instability in the system. After
+          extensive research and troubleshooting, I replaced Ngrok with my
+          default network gateway for direct backend communication.
+          Additionally, upgrading to a more powerful laptop helped manage
+          resource-intensive applications like Android Studio.
         </p>
-      </section>
-    </div>
+      </div>
 
-    <footer>
-      <p>&copy; 2025 <strong>tharinduc.me</strong> All rights reserved.</p>
-    </footer>
-  </body>
+      <!-- Challenge 2 -->
+      <div class="challenge">
+        <h4>2. Dynamic Wi-Fi Credentials Management in IoT Devices</h4>
+        <p>
+          During testing, hardcoded Wi-Fi credentials meant that any network
+          change required reprogramming the ESP32, a time-consuming process
+          that could affect device longevity. I resolved this by implementing
+          a Wi-Fi provisioning system that allows dynamic configuration via a
+          web interface, eliminating the need for frequent firmware updates.
+        </p>
+      </div>
+    </section>
+
+    <!-- Final Thoughts -->
+    <section class="section" id="final-thoughts">
+      <h2>Final Thoughts</h2>
+      <p>
+        Every development process comes with its challenges, and overcoming
+        them is what makes the project robust and future-proof. By addressing
+        connection stability and dynamic configuration issues, AgroLink
+        evolved into a reliable and efficient system for both industrial and
+        home environments. These experiences have not only strengthened my
+        problem-solving skills but also paved the way for innovative solutions
+        in future IoT projects.
+      </p>
+    </section>
+    <section id="project-links" class="section">
+      <h2>Related Projects</h2>
+      <ul>
+        <a href="https://github.com/Tharindu714/AgroLink.git" style="text-decoration: underline;"
+          target="_blank">https://github.com/Tharindu714/AgroLink.git</a>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 <strong>tharinduc.me</strong> All rights reserved.</p>
+  </footer>
+</body>
+
 </html>

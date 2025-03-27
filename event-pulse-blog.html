@@ -25,7 +25,7 @@
         }
 
         a {
-            color: #112240;
+            color: #ffffff;
             text-decoration: none;
         }
 
@@ -186,6 +186,34 @@
         .back-button:hover {
             background-color: #0cde91;
         }
+
+        .save-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .save-btn:hover {
+            background-color: #de0c56;
+        }
+
+        @media print {
+            body {
+                visibility: visible;
+            }
+
+            .no-print {
+                display: none;
+                /* Hide elements that should not be printed */
+            }
+        }
     </style>
 </head>
 
@@ -195,7 +223,8 @@
         <p>
             A comprehensive look into an Mobile Application solution using Java & NoSQL
         </p>
-        <a href="index.html#blogs" class="back-button">← See more Blogs</a>
+        <a href="index.html#blogs" class="back-button">&larr; Back to Blog</a>
+        <a class="save-btn" onclick="window.print()">📥 Save as a PDF</a>
     </header>
 
     <div class="blog-container">
@@ -372,6 +401,16 @@
             </p>
             <h4>Stay tuned for updates and new features!</h4>
         </section>
+
+        <section id="project-links" class="section">
+            <h2>Related Projects</h2>
+            <ul>
+              <a href="https://github.com/Tharindu714/EventPulse-Android-Full-Project.git" style="text-decoration: underline;"
+                target="_blank">https://github.com/Tharindu714/EventPulse-Android-Full-Project.git >> User Application</a>
+<br>
+                <a href="https://github.com/Tharindu714/EPAdmins-Android-Full-Project.git" style="text-decoration: underline;"
+                  target="_blank">https://github.com/Tharindu714/EPAdmins-Android-Full-Project.git >> Admin Application</a>
+          </section>
     </div>
 
     <footer>

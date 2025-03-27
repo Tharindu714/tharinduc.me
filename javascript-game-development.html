@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets\img\blog-logos\cowboy.png"
+      type="image/x-icon"
+    />
+    <title>Cowboy Escape – JavaScript Fun Game</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset & Base Styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        background-color: #333;
+        color: #fffdfd;
+        padding: 20px;
+      }
+
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      pre {
+        background: #272822;
+        color: #f8f8f2;
+        padding: 15px;
+        overflow-x: auto;
+        border-radius: 5px;
+        font-family: Consolas, monospace;
+        margin-bottom: 20px;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+
+      /* Header */
+      header {
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 30px;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        color: #0cde91;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2em;
+        color: #ffffff;
+      }
+
+      /* Blog Post Container */
+      .blog-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #000000;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+
+      .section h2 {
+        font-size: 1.8em;
+        color: #0cde91;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 5px;
+      }
+
+      .section p {
+        margin-bottom: 15px;
+      }
+
+      /* Image Placeholder Styles */
+      .image-placeholder {
+        background-color: #333;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        color: #dadada;
+        border: 2px dashed #bbb;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      /* Code Snippet Section */
+      .code-snippet {
+        margin-bottom: 30px;
+      }
+
+      .code-snippet h3 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        color: #c8c8c8;
+      }
+
+      /* Challenges Section */
+      .challenge {
+        background: #333;
+        border-left: 5px solid #0cde91;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+
+      .challenge h4 {
+        margin-bottom: 8px;
+        font-size: 1.2em;
+        color: #0cde91;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 2px solid #ddd;
+        color: #b3b3b3;
+      }
+
+      strong {
+        color: #0cde91;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .back-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 15px;
+        background-color: transparent;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      .back-btn:hover {
+        background-color: #0cde91;
+      }
+
+      .save-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 15px;
+        background-color: transparent;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+        cursor: pointer;
+      }
+
+      .save-btn:hover {
+        background-color: #de0c56;
+      }
+
+      @media print {
+        body {
+          visibility: visible;
+        }
+
+        .no-print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>JavaScript Fun Game: Cowboy Adventure</h1>
+      <p>
+        An interactive browser game built to teach JavaScript event handling and
+        DOM manipulation.
+      </p>
+      <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+      <a class="save-btn" onclick="window.print()">📥 Save as a PDF</a>
+    </header>
+
+    <div class="blog-container">
+      <!-- Project Description -->
+      <section class="section" id="project-description">
+        <h2>Project Description</h2>
+        <p>
+          This is my first JavaScript game – an engaging, interactive browser
+          game designed to teach the fundamentals of JavaScript event handling
+          and DOM manipulation. In this game, players control a cowboy who must
+          navigate through a series of obstacles by using keyboard inputs. The
+          game features real-time score tracking and various power-ups that
+          enhance the gameplay experience.
+        </p>
+        <p>
+          The project was built with vanilla HTML5 Canvas and JavaScript, making
+          it a perfect exercise for coding bootcamp enthusiasts and those new to
+          game development. The game emphasizes the practical application of
+          JavaScript for dynamic content manipulation and interactive design.
+        </p>
+        <!-- Image: Game Screenshot Placeholder -->
+        <div class="image-placeholder">
+          <img
+            src="assets\img\portfolio\cowboy.jpg"
+            alt="JavaScript Fun Game Screenshot"
+          />
+        </div>
+        <p>
+          The above image is a placeholder screenshot from the game, showcasing
+          the cowboy navigating obstacles on the canvas.
+        </p>
+      </section>
+
+      <!-- Technology Stack Explanation -->
+      <section class="section" id="tech-stack">
+        <h2>Why HTML5 Canvas & JavaScript?</h2>
+        <p>
+          The following technologies were used to build this interactive game:
+        </p>
+        <ul>
+          <li>
+            <strong>HTML5 Canvas:</strong> Provides a powerful 2D rendering
+            context for dynamic graphics and animations.
+          </li>
+          <li>
+            <strong>JavaScript:</strong> Enables event handling, game logic, and
+            DOM manipulation, making the gameplay interactive and engaging.
+          </li>
+          <li>
+            <strong>Vanilla CSS:</strong> Used for styling the game interface
+            and ensuring a consistent user experience.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Code Snippets Section -->
+      <section class="section" id="code-snippets">
+        <h2>Key Code Snippets</h2>
+
+        <!-- JavaScript Code Snippet -->
+        <div class="code-snippet">
+          <h3>JavaScript (Game Event Handling & Canvas Rendering)</h3>
+          <pre>
+// Set up the canvas and context
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+// Game variables
+let cowboy = { x: 50, y: canvas.height - 100, width: 50, height: 50 };
+let obstacles = [];
+let score = 0;
+
+// Listen for keyboard events
+document.addEventListener('keydown', function(event) {
+  if (event.code === 'ArrowUp') {
+    cowboy.y -= 20;
+  }
+  if (event.code === 'ArrowDown') {
+    cowboy.y += 20;
+  }
+});
+
+// Main game loop
+function gameLoop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Draw cowboy
+  ctx.fillStyle = 'brown';
+  ctx.fillRect(cowboy.x, cowboy.y, cowboy.width, cowboy.height);
+  // Update and draw obstacles...
+  // Score tracking logic
+  score++;
+  requestAnimationFrame(gameLoop);
+}
+gameLoop();
+        </pre
+          >
+        </div>
+
+        <!-- HTML Snippet for Canvas Setup -->
+        <div class="code-snippet">
+          <h3>HTML (Canvas Element)</h3>
+          <pre>
+&lt;!-- Canvas for the JavaScript Fun Game --&gt;
+&lt;canvas id="gameCanvas" width="800" height="400"&gt;
+  Your browser does not support the HTML5 canvas tag.
+&lt;/canvas&gt;
+        </pre
+          >
+        </div>
+      </section>
+
+      <!-- Challenges & Solutions Section -->
+      <section class="section" id="challenges">
+        <h2>Challenges Encountered & How I Overcame Them</h2>
+
+        <!-- Challenge 1 -->
+        <div class="challenge">
+          <h4>1. Ensuring Smooth Event Handling</h4>
+          <p>
+            Initially, managing rapid key presses caused lag in the game. I
+            refined the event listeners and implemented requestAnimationFrame to
+            optimize performance and create a smoother gameplay experience.
+          </p>
+        </div>
+
+        <!-- Challenge 2 -->
+        <div class="challenge">
+          <h4>2. Balancing Game Difficulty</h4>
+          <p>
+            Adjusting the obstacle frequency and speed was challenging.
+            Iterative testing helped fine-tune the balance between challenge and
+            fun, ensuring the game remained engaging while being accessible for
+            beginners.
+          </p>
+        </div>
+      </section>
+
+      <!-- Final Thoughts -->
+      <section class="section" id="final-thoughts">
+        <h2>Final Thoughts</h2>
+        <p>
+          Developing the JavaScript Fun Game was a rewarding learning
+          experience. Not only did it sharpen my skills in event handling and
+          canvas rendering, but it also provided practical insights into
+          creating interactive web applications. This project stands as a solid
+          foundation for further game development and more advanced JavaScript
+          applications.
+        </p>
+      </section>
+
+      <!-- Related Projects Section -->
+      <section id="project-links" class="section">
+        <h2>Related Projects</h2>
+        <ul>
+            <a
+              href="https://github.com/Tharindu714/JavaScript-Fun-Game.git"
+              target="_blank" style="text-decoration: underline;">
+            https://github.com/Tharindu714/JavaScript-Fun-Game.git
+            </a>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 <strong>tharinduc.me</strong> All rights reserved.</p>
+    </footer>
+  </body>
+</html>

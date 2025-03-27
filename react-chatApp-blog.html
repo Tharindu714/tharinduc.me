@@ -23,7 +23,7 @@
         }
 
         a {
-            color: #112240;
+            color: #ffffff;
             text-decoration: none;
         }
 
@@ -79,6 +79,34 @@
 
         .back-btn:hover {
             background-color: #0cde91;
+        }
+
+        .save-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .save-btn:hover {
+            background-color: #de0c56;
+        }
+
+        @media print {
+            body {
+                visibility: visible;
+            }
+
+            .no-print {
+                display: none;
+                /* Hide elements that should not be printed */
+            }
         }
 
         /* Blog Post Container */
@@ -149,6 +177,7 @@
         <h1>React Native Chat App</h1>
         <p>Real-time messaging using React Native on the frontend and Java with MySQL on the backend</p>
         <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+        <a class="save-btn" onclick="window.print()">📥 Save as a PDF</a>
     </header>
 
     <div class="blog-container">
@@ -334,6 +363,15 @@ public class AuthController extends HttpServlet {
                 for more insights and updates on future improvements!
             </p>
         </section>
+        <section id="project-links" class="section">
+            <h2>Related Projects</h2>
+            <ul>
+              <a href="https://github.com/Tharindu714/ReactApp_FrontEnd.git" style="text-decoration: underline;"
+                target="_blank">https://github.com/Tharindu714/ReactApp_FrontEnd.git >> Front End Code</a>
+          <br>
+          <a href="https://github.com/Tharindu714/ReactApp_Backend.git" style="text-decoration: underline;"
+                target="_blank">https://github.com/Tharindu714/ReactApp_Backend.git >> Back End Code</a>
+            </section>
     </div>
 
     <footer>

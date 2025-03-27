@@ -596,6 +596,24 @@
       image: "assets/img/main-blog-img/teamup.jpg",
       link: "teamUp-Task-collaboration-management-system.html",
     },
+
+    {
+      name: "Understanding OOP Concepts: A Beginner's Guide",
+      description:
+        "In this post, I share insights from my research paper on Object-Oriented Programming Concepts (OOPC). Whether you're new to programming or looking to deepen your understanding, this guide covers the fundamentals of OOP, including its history, key principles, and real-world applications.",
+      technologies: ["Java", "OOPC", "Research"],
+      image: "https://media.licdn.com/dms/image/v2/D4D12AQFHql8Dym1MhQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1675072633615?e=2147483647&v=beta&t=e4Sczl2clj5wdJFpFjgM_bpoPtN7UjEVI5W03Fjl9dw",
+      link: "oop-concept-beginner-guide.html",
+    },
+
+    {
+      name: "JavaScript Fun Game: Cowboy Adventure",
+      description:
+        "The project was built with vanilla HTML5 Canvas and JavaScript, making it a perfect exercise for coding bootcamp enthusiasts and those new to game development. The game emphasizes the practical application of JavaScript for dynamic content manipulation and interactive design.",
+        technologies: ["HTML5", "CSS3", "JavaScript"],
+      image: "assets/img/portfolio/cowboy.jpg",
+      link: "javascript-game-development.html",
+    },
   ];
 
   window.addEventListener("load", navmenuScrollspy);

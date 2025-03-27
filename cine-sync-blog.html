@@ -24,7 +24,7 @@
         }
 
         a {
-            color: #112240;
+            color: #ffffff;
             text-decoration: none;
         }
 
@@ -82,6 +82,23 @@
             background-color: #0cde91;
         }
 
+        .save-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .save-btn:hover {
+            background-color: #de0c56;
+        }
+
         /* Blog Post Container */
         .blog-container {
             max-width: 900px;
@@ -122,8 +139,7 @@
         .carousel img {
             position: absolute;
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: fit-content;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
@@ -166,10 +182,22 @@
             border-top: 2px solid #ddd;
             color: #b3b3b3;
         }
+
         strong {
             color: #0cde91;
             text-decoration: underline;
             cursor: pointer;
+        }
+
+        @media print {
+            body {
+                visibility: visible;
+            }
+
+            .no-print {
+                display: none;
+                /* Hide elements that should not be printed */
+            }
         }
     </style>
 </head>
@@ -182,6 +210,7 @@
             thoughts to build lasting memories.
         </p>
         <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+        <a class="save-btn" onclick="window.print()">📥 Save as a PDF</a>
     </header>
 
     <div class="blog-container">
@@ -364,21 +393,34 @@ alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),
         </pre>
             </div>
             <strong>Sorting:</strong>
-            <p><li>The code uses <pre>Collections.sort()</pre> with a custom Comparator to compare movie names without considering
-                    letter case.</li>
-                <li>This ensures the list of movies is arranged alphabetically.</li></p>
+            <p>
+                <li>The code uses
+                    <pre>Collections.sort()</pre> with a custom Comparator to compare movie names without considering
+                    letter case.
+                </li>
+                <li>This ensures the list of movies is arranged alphabetically.</li>
+            </p>
 
             <strong>Filtering:</strong>
             <p>
-                <pre>filter()</pre><li>This method checks if each movie's name contains the given search query (converted to lowercase for case-insensitive matching).</li>
-                <li>The results are collected into a new list <pre>(filteredMovies)</pre></li>
+            <pre>filter()</pre>
+            <li>This method checks if each movie's name contains the given search query (converted to lowercase for
+                case-insensitive matching).</li>
+            <li>The results are collected into a new list
+                <pre>(filteredMovies)</pre>
+            </li>
             </p>
         </section>
 
         <section class="section" id="final-thoughts">
             <h2>Usage in Your App</h2>
-            <p><li><strong>Integration:</strong> Use similar logic in your Android project when you fetch movie data from your database. You can sort the list once the data is loaded and then filter it based on user input from a search bar.</li>
-                <li><strong>Real-Time Search:</strong> Combine this with an EditText listener to update the filtered list as the user types, ensuring a dynamic and responsive search experience.</li></p>
+            <p>
+                <li><strong>Integration:</strong> Use similar logic in your Android project when you fetch movie data
+                    from your database. You can sort the list once the data is loaded and then filter it based on user
+                    input from a search bar.</li>
+                <li><strong>Real-Time Search:</strong> Combine this with an EditText listener to update the filtered
+                    list as the user types, ensuring a dynamic and responsive search experience.</li>
+            </p>
         </section>
 
         <!-- Challenges Section -->
@@ -408,6 +450,13 @@ alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),
                 engaging experience for movie enthusiasts. I’m continuously working on
                 improvements to ensure a seamless user experience.
             </p>
+        </section>
+        <section id="project-links" class="section">
+            <h2>Related Projects</h2>
+            <ul>
+                <a href="https://github.com/Tharindu714/CineSync_movie-Database-Android-App.git"
+                    style="text-decoration: underline;"
+                    target="_blank">https://github.com/Tharindu714/CineSync_movie-Database-Android-App.git</a>
         </section>
     </div>
 

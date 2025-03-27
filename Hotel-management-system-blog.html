@@ -23,7 +23,7 @@
         }
 
         a {
-            color: #112240;
+            color: #ffffff;
             text-decoration: none;
         }
 
@@ -80,6 +80,23 @@
         .back-btn:hover {
             background-color: #0cde91;
         }
+
+        .save-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 15px;
+        background-color: transparent;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+        cursor: pointer;
+      }
+
+      .save-btn:hover {
+        background-color: #de0c56;
+      }
 
         /* Blog Post Container */
         .blog-container {
@@ -171,6 +188,16 @@
             text-decoration: underline;
             cursor: pointer;
         }
+        @media print {
+        body {
+          visibility: visible;
+        }
+
+        .no-print {
+          display: none;
+          /* Hide elements that should not be printed */
+        }
+      }
     </style>
 </head>
 
@@ -182,6 +209,7 @@
             streamlining operations across all departments.
         </p>
         <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+        <a class="save-btn" onclick="window.print()">📥 Save as a PDF</a>
     </header>
 
     <div class="blog-container">
@@ -504,6 +532,13 @@ List&lt;Reservation&gt; filteredReservations = sortedReservations.stream()
                 further optimize performance and reliability.
             </p>
         </section>
+
+        <section id="project-links" class="section">
+            <h2>Related Projects</h2>
+            <ul>
+              <a href="https://github.com/Tharindu714/Tranquil_terrace.git" style="text-decoration: underline;"
+                target="_blank">https://github.com/Tharindu714/Tranquil_terrace.git</a>
+          </section>
     </div>
 
     <footer>

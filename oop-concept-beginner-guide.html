@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets\img\blog-logos\oopc.png"
+      type="image/x-icon"
+    />
+    <title>Understanding OOP Concepts: A Beginner's Guide</title>
+    <style>
+      /* Reset & Base Styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        background-color: #333;
+        color: #fffdfd;
+        padding: 20px;
+      }
+
+      a {
+        color: #112240;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      pre {
+        background: #272822;
+        color: #f8f8f2;
+        padding: 15px;
+        overflow-x: auto;
+        border-radius: 5px;
+        font-family: Consolas, monospace;
+        margin-bottom: 20px;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+
+      /* Header */
+      header {
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 30px;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        color: #0cde91;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2em;
+        color: #ffffff;
+      }
+
+      .back-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 15px;
+        background-color: transparent;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+        cursor: pointer;
+      }
+
+      .save-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 15px;
+        background-color: transparent;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+        cursor: pointer;
+      }
+
+      .save-btn:hover {
+        background-color: #de0c56;
+      }
+
+      .back-btn:hover {
+        background-color: #0cde91;
+      }
+
+      /* Blog Post Container */
+      .blog-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #000000;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+
+      .section h2 {
+        font-size: 1.8em;
+        color: #0cde91;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 5px;
+      }
+
+      .section p {
+        margin-bottom: 15px;
+      }
+
+      /* Code Snippet Section */
+      .code-snippet {
+        margin-bottom: 30px;
+      }
+
+      .code-snippet h3 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        color: #c8c8c8;
+      }
+
+      /* Image Placeholder */
+      .image-placeholder {
+        background-color: #555;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        color: #dadada;
+        border: 2px dashed #bbb;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      /* Challenges Section */
+      .challenge {
+        background: #333;
+        border-left: 5px solid #0cde91;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+
+      .challenge h4 {
+        margin-bottom: 8px;
+        font-size: 1.2em;
+        color: #0cde91;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 2px solid #ddd;
+        color: #b3b3b3;
+      }
+
+      @media print {
+        body {
+          visibility: visible;
+        }
+
+        .no-print {
+          display: none;
+          /* Hide elements that should not be printed */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Understanding Object-Oriented Programming Concepts</h1>
+      <p>
+        A comprehensive beginner’s guide to Abstraction, Inheritance,
+        Polymorphism, and Encapsulation.
+      </p>
+      <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+      <a id="savePdf" class="save-btn">📥 Save as a PDF</a>
+    </header>
+
+    <div class="blog-container">
+      <!-- Introduction Section -->
+      <section class="section" id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          In this post, I share insights from my research paper on
+          Object-Oriented Programming Concepts (OOPC). Whether you're new to
+          programming or looking to deepen your understanding, this guide covers
+          the fundamentals of OOP, including its history, key principles, and
+          real-world applications.
+        </p>
+        <div class="image-placeholder">
+          <img
+            src="https://media.licdn.com/dms/image/v2/D4D12AQFHql8Dym1MhQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1675072633615?e=2147483647&v=beta&t=e4Sczl2clj5wdJFpFjgM_bpoPtN7UjEVI5W03Fjl9dw"
+            alt="Article Cover Image"
+            srcset=""
+          />
+        </div>
+      </section>
+
+      <!-- Key Concepts Section -->
+      <section class="section" id="key-concepts">
+        <h2>Key OOP Concepts</h2>
+        <p>
+          Object-Oriented Programming organizes software design around objects
+          rather than actions, focusing on data and the methods that operate on
+          that data. The four core pillars are:
+        </p>
+        <ul>
+          <li>
+            <strong>Abstraction:</strong> Hiding complex implementation details
+            and showing only essential features.
+          </li>
+          <li>
+            <strong>Inheritance:</strong> Establishing an "IS-A" relationship
+            where a subclass inherits attributes and methods from a superclass.
+          </li>
+          <li>
+            <strong>Encapsulation:</strong> Bundling data and methods within
+            classes to protect the internal state.
+          </li>
+          <li>
+            <strong>Polymorphism:</strong> Allowing entities to take on multiple
+            forms through method overriding or overloading.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Code Snippets Section -->
+      <section class="section" id="code-snippets">
+        <h2>Valuable Code Snippets</h2>
+
+        <!-- 1. Abstraction Example -->
+        <div class="code-snippet">
+          <h3>1. Abstraction in Action</h3>
+          <pre>
+{`abstract class Vehicle {
+    int wheels;
+    public abstract void drive();
+}
+
+class Car extends Vehicle {
+    @Override
+    public void drive() {
+        System.out.println("Car is driving smoothly.");
+    }
+}
+
+// Usage
+Vehicle myCar = new Car();
+myCar.drive();`}
+        </pre
+          >
+          <p>
+            This code demonstrates abstraction by exposing only the essential
+            driving behavior while hiding complex details.
+          </p>
+        </div>
+
+        <!-- 2. Inheritance Example -->
+        <div class="code-snippet">
+          <h3>2. Inheritance and IS-A Relationship</h3>
+          <pre>
+{`class Animal {
+    public void makeSound() {
+        System.out.println("Some generic sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Bark!");
+    }
+}
+
+// Usage
+Animal pet = new Dog();
+pet.makeSound();`}
+        </pre
+          >
+          <p>
+            This snippet illustrates inheritance: a Dog is an Animal, but with
+            specialized behavior.
+          </p>
+        </div>
+
+        <!-- 3. Encapsulation Example -->
+        <div class="code-snippet">
+          <h3>3. Encapsulation Example</h3>
+          <pre>
+{`class Employee {
+    private String name;
+    private double salary;
+    
+    public Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public double getSalary() {
+        return salary;
+    }
+    
+    public void setSalary(double salary) {
+        if(salary > 0) {
+            this.salary = salary;
+        }
+    }
+}
+
+// Usage
+Employee emp = new Employee("Tharindu", 50000);
+System.out.println(emp.getName());
+emp.setSalary(55000);`}
+        </pre
+          >
+          <p>
+            This example encapsulates employee data, ensuring that sensitive
+            properties are accessed only through controlled methods.
+          </p>
+        </div>
+
+        <!-- 4. Polymorphism Example -->
+        <div class="code-snippet">
+          <h3>4. Polymorphism Example</h3>
+          <pre>
+{`class Shape {
+    public void draw() {
+        System.out.println("Drawing a shape");
+    }
+}
+
+class Circle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+class Square extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a square");
+    }
+}
+
+// Usage
+Shape s1 = new Circle();
+Shape s2 = new Square();
+s1.draw();
+s2.draw();`}
+        </pre
+          >
+          <p>
+            This snippet shows polymorphism by allowing a Shape reference to
+            point to different concrete shapes and call their respective draw
+            methods.
+          </p>
+        </div>
+
+        <!-- 5. Overloading vs. Overriding -->
+        <div class="code-snippet">
+          <h3>5. Overloading and Overriding</h3>
+          <pre>
+{`class Calculator {
+    // Method Overloading: same method name, different parameters
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+class AdvancedCalculator extends Calculator {
+    // Method Overriding: providing a specific implementation for a method from the superclass
+    @Override
+    public int add(int a, int b) {
+        System.out.println("Performing advanced addition:");
+        return super.add(a, b);
+    }
+}
+
+// Usage
+Calculator calc = new AdvancedCalculator();
+System.out.println(calc.add(10, 20));
+System.out.println(calc.add(10, 20, 30));`}
+        </pre
+          >
+          <p>
+            This code highlights both method overloading and overriding,
+            showcasing how a class can provide multiple implementations and
+            specialized behavior.
+          </p>
+        </div>
+      </section>
+
+      <!-- Final Thoughts Section -->
+      <section class="section" id="final-thoughts">
+        <h2>Final Thoughts</h2>
+        <p>
+          Object-Oriented Programming (OOP) provides a powerful paradigm for
+          developing complex software systems by promoting modularity,
+          reusability, and maintainability. This post introduced key OOP
+          concepts with real code examples, making it easier for beginners to
+          grasp the fundamental principles of abstraction, inheritance,
+          encapsulation, and polymorphism.
+        </p>
+        <p>
+          Whether you're a novice or an experienced developer, understanding
+          these concepts will pave the way for writing cleaner, more efficient,
+          and scalable code.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Tharindu Chanaka | All Rights Reserved</p>
+    </footer>
+
+    <!-- Save as PDF Button -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      document.getElementById("savePdf").addEventListener("click", function () {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF("p", "mm", "a4");
+
+        html2canvas(document.body, { scale: 2, useCORS: true }).then(
+          (canvas) => {
+            const imgWidth = 210; // A4 width in mm
+            const pageHeight = 297; // A4 height in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            let heightLeft = imgHeight;
+            let position = 0;
+
+            const imgData = canvas.toDataURL("image/png");
+
+            doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+
+            while (heightLeft > 0) {
+              position -= pageHeight;
+              doc.addPage();
+              doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+              heightLeft -= pageHeight;
+            }
+
+            doc.save("blog-post.pdf");
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

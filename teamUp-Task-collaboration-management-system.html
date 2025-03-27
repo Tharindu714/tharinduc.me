@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="assets\img\blog-logos\teamup.png" type="image/x-icon">
   <title>TeamUp - Task & Project Management Tool</title>
   <style>
@@ -12,6 +13,7 @@
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: "Roboto", sans-serif;
       line-height: 1.6;
@@ -19,14 +21,17 @@
       color: #fffdfd;
       padding: 20px;
     }
+
     a {
-      color: #112240;
+      color: #ffffff;
       text-decoration: none;
     }
+
     img {
       max-width: 100%;
       height: auto;
     }
+
     pre {
       background: #272822;
       color: #f8f8f2;
@@ -36,9 +41,11 @@
       font-family: Consolas, monospace;
       margin-bottom: 20px;
     }
+
     code {
       font-family: Consolas, monospace;
     }
+
     /* Header */
     header {
       text-align: center;
@@ -46,15 +53,18 @@
       border-bottom: 2px solid #ddd;
       margin-bottom: 30px;
     }
+
     header h1 {
       font-size: 2.5em;
       color: #0cde91;
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 1.2em;
       color: #ffffff;
     }
+
     .back-btn {
       display: inline-block;
       margin-top: 15px;
@@ -66,9 +76,11 @@
       font-weight: bold;
       transition: background 0.3s;
     }
+
     .back-btn:hover {
       background-color: #0cde91;
     }
+
     /* Blog Post Container */
     .blog-container {
       max-width: 900px;
@@ -78,9 +90,11 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+
     .section {
       margin-bottom: 40px;
     }
+
     .section h2 {
       font-size: 1.8em;
       color: #0cde91;
@@ -88,18 +102,22 @@
       border-bottom: 2px solid #ffffff;
       padding-bottom: 5px;
     }
+
     .section p {
       margin-bottom: 15px;
     }
+
     /* Code Snippet Section */
     .code-snippet {
       margin-bottom: 30px;
     }
+
     .code-snippet h3 {
       font-size: 1.4em;
       margin-bottom: 10px;
       color: #c8c8c8;
     }
+
     /* Challenges Section */
     .challenge {
       background: #333;
@@ -108,11 +126,13 @@
       margin-bottom: 20px;
       border-radius: 4px;
     }
+
     .challenge h4 {
       margin-bottom: 8px;
       font-size: 1.2em;
       color: #0cde91;
     }
+
     /* Footer */
     footer {
       text-align: center;
@@ -121,13 +141,43 @@
       border-top: 2px solid #ddd;
       color: #b3b3b3;
     }
+
+    .save-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: transparent;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .save-btn:hover {
+      background-color: #de0c56;
+    }
+
+    @media print {
+      body {
+        visibility: visible;
+      }
+
+      .no-print {
+        display: none;
+        /* Hide elements that should not be printed */
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>TeamUp - Task &amp; Project Management Tool</h1>
     <p>Hackathon-winning web app for remote teams: Manage tasks, projects, and collaborate in real time.</p>
     <a href="index.html#blogs" class="back-btn">&larr; Back to Blog</a>
+    <a class="save-btn" onclick="window.print()">📥 Save as a PDF</a>
   </header>
 
   <div class="blog-container">
@@ -135,15 +185,15 @@
     <section class="section" id="introduction">
       <h2>Project Introduction</h2>
       <p>
-        <strong>TeamUp</strong> is our 24-hour coding Hackathon project by team <em>Code Ravana</em>. 
-        This tool addresses the needs of remote teams for task assignment, user management, file sharing, and more. 
-        Our project was selected among the top 10 teams in the competition, showcasing real-time collaboration features 
+        <strong>TeamUp</strong> is our 24-hour coding Hackathon project by team <em>Code Ravana</em>.
+        This tool addresses the needs of remote teams for task assignment, user management, file sharing, and more.
+        Our project was selected among the top 10 teams in the competition, showcasing real-time collaboration features
         using PHP and MySQL for data persistence.
       </p>
       <p>
-        <em>We developed user registration &amp; authentication, project creation, 
-        team collaboration modules, file sharing, and a dynamic calendar, 
-        ensuring a centralized workspace for remote teams.</em>
+        <em>We developed user registration &amp; authentication, project creation,
+          team collaboration modules, file sharing, and a dynamic calendar,
+          ensuring a centralized workspace for remote teams.</em>
       </p>
     </section>
 
@@ -183,7 +233,7 @@ try {
 ?>`}
         </pre>
         <p>
-          This snippet establishes a secure PDO connection to the MySQL database, enabling 
+          This snippet establishes a secure PDO connection to the MySQL database, enabling
           safe queries and robust error handling.
         </p>
       </div>
@@ -215,7 +265,7 @@ if(isset($_POST['register'])) {
 ?>`}
         </pre>
         <p>
-          This code handles user registration with password hashing for security, ensuring 
+          This code handles user registration with password hashing for security, ensuring
           all credentials are stored safely in the database.
         </p>
       </div>
@@ -251,7 +301,7 @@ if(isset($_POST['create_task'])) {
 ?>`}
         </pre>
         <p>
-          This snippet demonstrates how tasks are created and assigned to specific team members, 
+          This snippet demonstrates how tasks are created and assigned to specific team members,
           linking them to projects within the database.
         </p>
       </div>
@@ -274,8 +324,8 @@ echo json_encode($events);
 ?>`}
         </pre>
         <p>
-          The <code>calendar.php</code> file retrieves task deadlines as calendar events. 
-          These events are returned in JSON format, making it easy to integrate 
+          The <code>calendar.php</code> file retrieves task deadlines as calendar events.
+          These events are returned in JSON format, making it easy to integrate
           with popular JavaScript calendar libraries.
         </p>
       </div>
@@ -301,8 +351,8 @@ if(isset($_POST['send_message'])) {
 ?>`}
         </pre>
         <p>
-          This code shows how a simple chat feature can be implemented. Messages 
-          are inserted into the database, and real-time functionality can be 
+          This code shows how a simple chat feature can be implemented. Messages
+          are inserted into the database, and real-time functionality can be
           achieved through AJAX polling or WebSockets.
         </p>
       </div>
@@ -312,8 +362,8 @@ if(isset($_POST['send_message'])) {
     <section class="section" id="winning-proof">
       <h2>Hackathon Triumph</h2>
       <p>
-        Our team, <em>Code Ravana</em>, built TeamUp within 24 hours, making it 
-        to the <strong>Top 10 teams</strong> in the hackathon. Below is our 
+        Our team, <em>Code Ravana</em>, built TeamUp within 24 hours, making it
+        to the <strong>Top 10 teams</strong> in the hackathon. Below is our
         winning proof photo:
       </p>
       <!-- Placeholder for the winning proof image -->
@@ -327,14 +377,20 @@ if(isset($_POST['send_message'])) {
     <section class="section" id="final-thoughts">
       <h2>Final Thoughts</h2>
       <p>
-        TeamUp is more than just a hackathon project—it's a fully functional 
-        tool for remote teams. By leveraging <strong>PHP</strong>, 
-        <strong>MySQL</strong>, and modern web technologies, we've created a 
-        robust environment for task management, project collaboration, and 
-        streamlined communication. Future improvements include advanced 
-        reporting, Kanban boards, and AI-driven analytics to further enhance 
+        TeamUp is more than just a hackathon project—it's a fully functional
+        tool for remote teams. By leveraging <strong>PHP</strong>,
+        <strong>MySQL</strong>, and modern web technologies, we've created a
+        robust environment for task management, project collaboration, and
+        streamlined communication. Future improvements include advanced
+        reporting, Kanban boards, and AI-driven analytics to further enhance
         team productivity.
       </p>
+    </section>
+    <section id="project-links" class="section">
+      <h2>Related Projects</h2>
+      <ul>
+        <a href="https://github.com/Tharindu714/Team-up.git" style="text-decoration: underline;"
+          target="_blank">https://github.com/Tharindu714/Team-up.git</a>
     </section>
   </div>
 
@@ -342,4 +398,5 @@ if(isset($_POST['send_message'])) {
     <p>&copy; 2025 Code Ravana | Hackathon Project</p>
   </footer>
 </body>
+
 </html>
