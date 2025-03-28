@@ -265,7 +265,7 @@
       link: "https://chanakaelectronics.com/",
     },
     {
-      name: "Tranquil Terrace",
+      name: "Tranquil Terrace- HMS",
       description:
         "Tranquil Terrace is a hotel system management desktop application which allows handling customer service in one place.",
       technologies: ["Java", "Swing", "Apache NetBeans", "MySQL"],
@@ -516,6 +516,33 @@
     },
   ];
 
+  const openSources =[
+    {
+      name: "Multithreading Debugging Library -Java",
+      description:
+        "The Multithreading Debugging Library is a powerful Java-based tool designed to help developers detect, analyze, and debug multithreading issues such as deadlocks, race conditions, and thread execution anomalies.",
+      technologies: [
+        "Java",
+        "NetBeans IDE",
+      ],
+      image: "assets/img/open-source-img/multithreading.jpg",
+      link: "https://github.com/Tharindu714/Multithreading-Debugger-library.git",
+    },
+
+    {
+      name: "lightweight JavaScript/TypeScript library",
+      description:
+        "A lightweight JavaScript/TypeScript library that optimizes web app performance by lazy-loading images, managing state, and more.",
+      technologies: [
+        "TypeScript",
+        "JavaScript",
+        "HTML5",
+      ],
+      image: "assets/img/open-source-img/lazy-load.jpg",
+      link: "https://github.com/Tharindu714/lazyload-library-tsx.git",
+    },
+  ];
+
   const skills = [
     { image: "assets/img/clients/client-1.png", alt: "Skill 1" },
     { image: "assets/img/clients/client-2.png", alt: "Skill 2" },
@@ -602,7 +629,7 @@
       description:
         "In this post, I share insights from my research paper on Object-Oriented Programming Concepts (OOPC). Whether you're new to programming or looking to deepen your understanding, this guide covers the fundamentals of OOP, including its history, key principles, and real-world applications.",
       technologies: ["Java", "OOPC", "Research"],
-      image: "https://media.licdn.com/dms/image/v2/D4D12AQFHql8Dym1MhQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1675072633615?e=2147483647&v=beta&t=e4Sczl2clj5wdJFpFjgM_bpoPtN7UjEVI5W03Fjl9dw",
+      image: "assets/img/main-blog-img/OOPs.jpg",
       link: "oop-concept-beginner-guide.html",
     },
 
@@ -611,7 +638,7 @@
       description:
         "The project was built with vanilla HTML5 Canvas and JavaScript, making it a perfect exercise for coding bootcamp enthusiasts and those new to game development. The game emphasizes the practical application of JavaScript for dynamic content manipulation and interactive design.",
         technologies: ["HTML5", "CSS3", "JavaScript"],
-      image: "assets/img/portfolio/cowboy.jpg",
+      image: "https://i.ytimg.com/vi/Wp-VDfxCmLQ/hqdefault.jpg",
       link: "javascript-game-development.html",
     },
   ];
@@ -759,4 +786,62 @@
 
     skillsContainer.appendChild(skillItem);
   });
+
+  const openSourceContainer = document.getElementById("open-source-container");
+
+  openSources.forEach((open_source_projects) => {
+    const openSourceDiv = document.createElement("div");
+    openSourceDiv.classList.add("service-item");
+    openSourceDiv.style = `
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      width: 500px;
+      height: fit-content;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    `;
+
+    openSourceDiv.innerHTML = `
+      <div class="image-container-os">
+        <img src="${open_source_projects.image}" alt="Project Image" />
+      </div>
+      
+      <h3 class="title">${open_source_projects.name}</h3>
+      <p class="description">${open_source_projects.description}</p>
+    
+      <div class="technologies">
+        ${open_source_projects.technologies
+          .map(
+            (tech) => `
+            <span class="tech-tag">
+              ${tech}
+            </span>`
+          )
+          .join("")}
+      </div>
+    
+    <a href="${open_source_projects.link}" class="glow-button" target="_blank"
+    style="
+    color: #0cde91;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    ">
+    🔗 View this Project
+    </a>
+  `;
+  openSourceContainer.appendChild(openSourceDiv);
+  });
+
 })();
