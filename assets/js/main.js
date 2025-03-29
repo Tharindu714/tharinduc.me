@@ -541,6 +541,17 @@
       image: "assets/img/open-source-img/lazy-load.jpg",
       link: "https://github.com/Tharindu714/lazyload-library-tsx.git",
     },
+        {
+      name: "WiFiSentinel-Wifi Security Auditor",
+      description:
+        "This Application is designed to keep your Wi-Fi network secure, optimized, and always under your control. ",
+      technologies: [
+        "Java",
+        "NetBeans IDE",
+      ],
+      image: "assets/img/open-source-img/wifi.jpg",
+      link: "https://github.com/Tharindu714/WiFiSentinel-OpenSource-App.git",
+    },
   ];
 
   const skills = [
