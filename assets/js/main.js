@@ -544,13 +544,59 @@
         {
       name: "WiFiSentinel-Wifi Security Auditor",
       description:
-        "This Application is designed to keep your Wi-Fi network secure, optimized, and always under your control. ",
+        "This Application is designed to keep your Wi-Fi network secure, optimized, and always under your control.",
       technologies: [
         "Java",
         "NetBeans IDE",
       ],
       image: "assets/img/open-source-img/wifi.jpg",
       link: "https://github.com/Tharindu714/WiFiSentinel-OpenSource-App.git",
+    },
+
+            {
+      name: "System Monitor Shell Command Application",
+      description:
+        "A lightweight system resource monitoring project that displays your CPU, memory, and disk usage.",
+      technologies: [
+        "GitBash",
+        "CMD", "Shell Command"
+      ],
+      image: "assets/img/open-source-img/system_monitor.jpg",
+      link: "https://github.com/Tharindu714/System-Monitor-Open_source.git",
+    },
+
+                {
+      name: "File-renamer-Shell-executioner",
+      description:
+        "Bulk File Renamer is a simple yet powerful script that helps you rename multiple files in a directory at once by replacing a specific text pattern in filenames.",
+      technologies: [
+        "GitBash",
+        "CMD", "Shell Command"
+      ],
+      image: "assets/img/open-source-img/Bulk_renamer.jpg",
+      link: "https://github.com/Tharindu714/File-renamer-Shell-executioner.git",
+    },
+
+                    {
+      name: "HMS Reservation DB Architecture",
+      description:
+        "This repository contains a MySQL database script for a hotel management system. The script creates and populates a database named hotel_db, which is designed to handle various aspects of hotel operations, such as managing cities, customers, rooms, bookings, and payments.",
+      technologies: [
+        "MySQL","TypeScript","JavaScript","C#","Java","Python","PHP"
+      ],
+      image: "assets/img/open-source-img/HMS_db.jpg",
+      link: "https://github.com/Tharindu714/Basic-Guest-House-Management-system-Database.git",
+    },
+
+                        {
+      name: "Charity Service DB Architecture",
+      description:
+        "This repository contains a MySQL database script for a hotel management system. The script creates and populates a database named hotel_db, which is designed to handle various aspects of hotel operations, such as managing cities, customers, rooms, bookings, and payments.",
+      technologies: [
+        "MySQL","TypeScript","JavaScript","C#","C++","Java","Python","Kotlin","PHP"
+      ],
+      image: "assets/img/open-source-img/charity_db.jpg",
+      link: "https://github.com/Tharindu714/Charity-service-database.git",
     },
   ];
 
