@@ -241,22 +241,6 @@
   }
   const projects = [
     {
-      name: "AgroLink 🍃",
-      description:
-        "AgroLink is an IoT-based research project that was developed for a traditional system-driven tea factory.",
-      technologies: [
-        "C++",
-        "Java",
-        "JavaScript",
-        "React",
-        "CSS3",
-        "Arduino",
-        "NetBeans",
-      ],
-      image: "assets/img/portfolio/agrolink.jpg",
-      link: "https://github.com/Tharindu714/AgroLink.git",
-    },
-    {
       name: "E-Commerce Application",
       description:
         "This platform provides all kind of electronics & electrical equipments for local customers",
@@ -313,15 +297,6 @@
       technologies: ["HTML5", "Bootstrap", "CSS3", "JavaScript", "PHP"],
       image: "assets/img/portfolio/deltacodex.JPG",
       link: "https://deltacodexgraphics.site/",
-    },
-
-    {
-      name: "CineSync Android App",
-      description:
-        "A comprehensive platform for movie and TV enthusiasts to explore, review, and track their favorite content. Features include personalized recommendations, user-generated reviews, advanced search filters (genre, year, rating), watchlists, and integration with streaming services. Built with React, Node.js, Firebase, and IMDB API for real-time data updates.",
-      technologies: ["Java", "Kotlin", "Android", "Firebase", "SQLite"],
-      image: "assets/img/portfolio/cinesync.png",
-      link: "https://github.com/Tharindu714/CineSync_movie-Database-Android-App.git",
     },
 
     {
@@ -514,17 +489,59 @@
       image: "assets/img/portfolio/deltaC.jpeg",
       link: "https://github.com/Tharindu714/deltacodex.git",
     },
+
+    {
+      name: "Unity Mobile Gaming Component Development",
+      description:
+        "Provide a solid foundation for mobile game development in Unity, showcasing a modular Main Menu system, scene management, UI components, and project configuration.",
+      technologies: ["Unity", "C#", "Mobile Game Development"],
+      image: "assets/img/portfolio/unity_mobile_designs.png",
+      link: "https://github.com/Tharindu714/unity-Mobile-game-Components-Basic.git",
+    },
+
+    {
+      name: "Endless Runner Game in Unity 🏃️",
+      description:
+        "Embark on a magical journey with Arissa—a Unity-powered educational RPG that teaches core game mechanics through interactive lessons and animations.",
+      technologies: ["Unity", "C#", "shaderLab", "HLSL"],
+      image: "assets/img/portfolio/arissa_game.jpg",
+      link: "https://github.com/Tharindu714/Unity-powered-educational-game-Project.git",
+    },
+
+    {
+      name: "Unity Basic Animation Project 🎮",
+      description:
+        "Learn and experiment with Unity’s animation system through practical examples—covering Animation Clips, Animator Controllers, Blend Trees, and script-driven triggers.",
+      technologies: ["Unity", "C#", "HLSL"],
+      image: "assets/img/portfolio/unity_anim.png",
+      link: "https://github.com/Tharindu714/Unity-animation-basic-Project.git",
+    },
+
+    {
+      name: "Online Note Collection Database for SE Students",
+      description:
+        "A static, responsive website offering JIAT students organized access to lecture notes across multiple subjects.",
+      technologies: ["JavaScript", "CSS3", "HTML5", "SCSS"],
+      image: "assets/img/portfolio/notehive.png",
+      link: "https://tharindu714.github.io/notehive.com/",
+    },
+
+    {
+      name: "OODP Real World Scenario Trainer",
+      description:
+        "A hands-on collection of foundational Object-Oriented Design Patterns implemented in Java. Each pattern features a real-world scenario, UML-conformant code, and execution output.",
+      technologies: ["Java", "CSS3", "HTML5"],
+      image: "assets/img/portfolio/oodp.PNG",
+      link: "https://tharindu714.github.io/Design-Patterns-FULL/index.html",
+    },
   ];
 
-  const openSources =[
+  const openSources = [
     {
       name: "Multithreading Debugging Library -Java",
       description:
         "The Multithreading Debugging Library is a powerful Java-based tool designed to help developers detect, analyze, and debug multithreading issues such as deadlocks, race conditions, and thread execution anomalies.",
-      technologies: [
-        "Java",
-        "NetBeans IDE",
-      ],
+      technologies: ["Java", "NetBeans IDE"],
       image: "assets/img/open-source-img/multithreading.jpg",
       link: "https://github.com/Tharindu714/Multithreading-Debugger-library.git",
     },
@@ -533,70 +550,525 @@
       name: "lightweight JavaScript/TypeScript library",
       description:
         "A lightweight JavaScript/TypeScript library that optimizes web app performance by lazy-loading images, managing state, and more.",
-      technologies: [
-        "TypeScript",
-        "JavaScript",
-        "HTML5",
-      ],
+      technologies: ["TypeScript", "JavaScript", "HTML5"],
       image: "assets/img/open-source-img/lazy-load.jpg",
       link: "https://github.com/Tharindu714/lazyload-library-tsx.git",
     },
-        {
+    {
       name: "WiFiSentinel-Wifi Security Auditor",
       description:
         "This Application is designed to keep your Wi-Fi network secure, optimized, and always under your control.",
-      technologies: [
-        "Java",
-        "NetBeans IDE",
-      ],
+      technologies: ["Java", "NetBeans IDE"],
       image: "assets/img/open-source-img/wifi.jpg",
       link: "https://github.com/Tharindu714/WiFiSentinel-OpenSource-App.git",
     },
 
-            {
+    {
       name: "System Monitor Shell Command Application",
       description:
         "A lightweight system resource monitoring project that displays your CPU, memory, and disk usage.",
-      technologies: [
-        "GitBash",
-        "CMD", "Shell Command"
-      ],
+      technologies: ["GitBash", "CMD", "Shell Command"],
       image: "assets/img/open-source-img/system_monitor.jpg",
       link: "https://github.com/Tharindu714/System-Monitor-Open_source.git",
     },
 
-                {
+    {
       name: "File-renamer-Shell-executioner",
       description:
         "Bulk File Renamer is a simple yet powerful script that helps you rename multiple files in a directory at once by replacing a specific text pattern in filenames.",
-      technologies: [
-        "GitBash",
-        "CMD", "Shell Command"
-      ],
+      technologies: ["GitBash", "CMD", "Shell Command"],
       image: "assets/img/open-source-img/Bulk_renamer.jpg",
       link: "https://github.com/Tharindu714/File-renamer-Shell-executioner.git",
     },
 
-                    {
+    {
       name: "HMS Reservation DB Architecture",
       description:
         "This repository contains a MySQL database script for a hotel management system. The script creates and populates a database named hotel_db, which is designed to handle various aspects of hotel operations, such as managing cities, customers, rooms, bookings, and payments.",
       technologies: [
-        "MySQL","TypeScript","JavaScript","C#","Java","Python","PHP"
+        "MySQL",
+        "TypeScript",
+        "JavaScript",
+        "C#",
+        "Java",
+        "Python",
+        "PHP",
       ],
       image: "assets/img/open-source-img/HMS_db.jpg",
       link: "https://github.com/Tharindu714/Basic-Guest-House-Management-system-Database.git",
     },
 
-                        {
+    {
       name: "Charity Service DB Architecture",
       description:
         "This repository contains a MySQL database script for a hotel management system. The script creates and populates a database named hotel_db, which is designed to handle various aspects of hotel operations, such as managing cities, customers, rooms, bookings, and payments.",
       technologies: [
-        "MySQL","TypeScript","JavaScript","C#","C++","Java","Python","Kotlin","PHP"
+        "MySQL",
+        "TypeScript",
+        "JavaScript",
+        "C#",
+        "C++",
+        "Java",
+        "Python",
+        "Kotlin",
+        "PHP",
       ],
       image: "assets/img/open-source-img/charity_db.jpg",
       link: "https://github.com/Tharindu714/Charity-service-database.git",
+    },
+    {
+      name: "Scala Content Management System",
+      description:
+        "This project demonstrates a multi-language project structure combining both Scala and Java codebases.",
+      technologies: ["Scala", "Java", "CSS3", "HTML5", "CMS"],
+      image: "assets/img/open-source-img/scala_cms.jpg",
+      link: "https://github.com/Tharindu714/Scala-content-management-System.git",
+    },
+    {
+      name: "Arduino 2 Wheel Obstacle avoiding Car",
+      description:
+        "2WD Arduino robot with ultrasonic servo scanning for obstacle avoidance and Bluetooth-based manual control with LED and buzzer feedback.",
+      technologies: ["C++", "Arduino", "Ultrasonic Sensor", "Bluetooth"],
+      image: "assets/img/open-source-img/2W_car.jpg",
+      link: "https://github.com/Tharindu714/Arduino-2Wheel-obstacle-avoiding-car-FULL.git",
+    },
+  ];
+
+  const research = [
+    {
+      name: "AgroLink 🍃",
+      description:
+        "AgroLink is an IoT-based research project that was developed for a traditional system-driven tea factory.",
+      technologies: [
+        "C++",
+        "Java",
+        "JavaScript",
+        "React",
+        "CSS3",
+        "Arduino",
+        "NetBeans",
+      ],
+      image: "assets/img/portfolio/agrolink.jpg",
+      link: "https://github.com/Tharindu714/AgroLink.git",
+    },
+
+    {
+      name: "CineSync Android App",
+      description:
+        "A comprehensive platform for movie and TV enthusiasts to explore, review, and track their favorite content. Features include personalized recommendations, user-generated reviews, advanced search filters (genre, year, rating), watchlists, and integration with streaming services. Built with React, Node.js, Firebase, and IMDB API for real-time data updates.",
+      technologies: ["Java", "Kotlin", "Android", "Firebase", "SQLite"],
+      image: "assets/img/portfolio/cinesync.png",
+      link: "https://github.com/Tharindu714/CineSync_movie-Database-Android-App.git",
+    },
+
+    {
+      name: "First Person Horror Survival Game in Unity",
+      description:
+        "© 2025 /Insane Games By Tharindu Chanaka. All rights reserved. Built with Unity.",
+      technologies: ["Unity", "C#", "shaderLab", "HLSL"],
+      image: "assets/img/portfolio/kyf.jpg",
+      link: "https://github.com/Tharindu714/Know-Your-Fear-First-Person-Survival-Horror-Game.git",
+    },
+
+    {
+      name: "3D Scrolling Shooter Game in Unity",
+      description:
+        "This is an on-going reaserch project that aims to develop a 3D Scrolling zombie Shooter Game using Unity.",
+      technologies: ["Unity", "C#", "shaderLab", "HLSL"],
+      image: "assets/img/portfolio/scrolling_game.jpg",
+      link: "https://github.com/Tharindu714/3D-Side-Scroller-Game.git",
+    },
+
+    {
+      name: "Charging Timer Unit Project - Arduino",
+      description:
+        "Arduino-based timer that indicates charge status via an LED and enforces a cooldown period before recharging. Features a buzzer for alerts and a button to reset the timer.",
+      technologies: ["C++", "Arduino", "LED", "Buzzer"],
+      image: "assets/img/portfolio/arduino_timer.jpg",
+      link: "https://github.com/Tharindu714/Charging-Timer-Unit-simple-Sketch.git",
+    },
+
+    {
+      name: "Automated Smart Clothing Line - Arduino",
+      description:
+        "An Arduino-driven retractable clothesline system that protects clothes from rain automatically. It uses a rain sensor to detect weather conditions and retracts the line when rain is detected, ensuring clothes stay dry.",
+      technologies: ["C++", "Arduino", "Rain Sensor", "Servo Motor"],
+      image: "assets/img/portfolio/smart_cloth.jpg",
+      link: "https://github.com/Tharindu714/Smart-Cloth-Line-Simple-Project.git",
+    },
+
+    {
+      name: "Intelligent Chatbot system - Askghost.com",
+      description:
+        "A demonic chatbot built with Next.js (App Router), Vercel for hosting, and Firebase for data storage. Step into the Cursed Realm and let the Ghost guide you.",
+      technologies: ["JavaScript", "TypeScript", "HTML5", "CSS3", "Next.js"],
+      image: "assets/img/portfolio/askghost.PNG",
+      link: "https://github.com/Tharindu714/AskGhost.com.git",
+    },
+
+    {
+      name: "Jurassic World Inventory Management System 🦖",
+      description:
+        "A robust, multi-module Java EE application for managing dinosaur inventory, with security, business logic, and a rich web interface.",
+      technologies: ["Java", "Java EE", "HTML5", "CSS3", "JavaScript"],
+      image: "assets/img/portfolio/j2ee_jurassic.png",
+      link: "https://github.com/Tharindu714/Jurassic-World-J2EE-Inventory-System.git",
+    },
+
+    {
+      name: "J2EE Bank Management System 🏦",
+      description:
+        "A robust, enterprise-grade banking system built with Java EE and Enterprise JavaBeans (EJB), delivering a secure, scalable, and user-friendly experience for financial operations.",
+      technologies: ["Java", "Java EE", "HTML5", "CSS3", "JavaScript"],
+      image: "assets/img/portfolio/banking.png",
+      link: "https://github.com/Tharindu714/National-Banking-System.git",
+    },
+  ];
+
+  const funny = [
+    {
+      name: "Promotional WEB for Know Your Fear Game",
+      description:
+        "This repository hosts the static web pages promoting the 'Know Your Fear' Unity 3D game. It delivers essential information, visuals, and download links to players, ensuring a seamless marketing landing page experience",
+      technologies: ["JavaScript", "HTML5", "CSS3", "Firebase"],
+      image: "assets/img/portfolio/kyfweb.png",
+      link: "https://tharindu714.github.io/KnowYourFear.com/",
+    },
+
+    {
+      name: "Retro Ping Pong with AI",
+      description:
+        "Welcome to Pong AI — a modern, crisp take on the classic Pong game with responsive visuals, smooth controls, and a cheeky AI opponent that loves a good rematch.",
+      technologies: ["JavaScript", "HTML5", "CSS3"],
+      image: "assets/img/portfolio/pongai.png",
+      link: "https://tharindu714.github.io/pongai.com/",
+    },
+
+    {
+      name: "Retro Bomberman with AI",
+      description:
+        "Retro Bomber is a small arcade game inspired by classic bomber-style levels. You (the Player) must place bombs, break blocks, and outsmart enemies while keeping your lives.",
+      technologies: ["JavaScript", "HTML5", "CSS3"],
+      image: "assets/img/portfolio/bomberai.png",
+      link: "https://tharindu714.github.io/retrobomber.com/",
+    },
+  ];
+
+  const bcd_proj = [
+    {
+      name: "Remote Method Invocation (RMI) Project 🚀",
+      description:
+        "The Remote Method Invocation (RMI) Project is designed to demonstrate and implement the Java RMI framework for distributed application development.",
+      technologies: ["Java", "RMI", "Networking", "IntelliJ IDEA"],
+      image: "assets/img/bcd_projects/photo_5824499257590266335_y.jpg",
+      link: "https://github.com/Tharindu714/Remote-Method-Invocation.git",
+    },
+
+    {
+      name: "Real-time currency conversion App 💱",
+      description:
+        "The Real-time Currency Conversion App is a Java-based application that provides real-time currency conversion functionality using the ExchangeRate-API.",
+      technologies: ["Java", "IntelliJ IDEA", "ExchangeRate-API"],
+      image: "assets/img/bcd_projects/photo_5824588923622504941_y.jpg",
+      link: "https://github.com/Tharindu714/Currency-converter-app.git",
+    },
+
+    {
+      name: "Java EE Session Beans Application 🏦",
+      description:
+        "Java EE examples showcasing Stateless, Stateful, and Singleton Session Beans with simple web clients.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "EJB"],
+      image: "assets/img/bcd_projects/photo_5824774809807075600_y.jpg",
+      link: "https://github.com/Tharindu714/BCD-Session-Beans.git",
+    },
+
+    {
+      name: "Context & Dependency Injection with Java EE 🔌",
+      description:
+        "This project demonstrates the power of Jakarta Contexts and Dependency Injection (CDI) by implementing a modular and extensible notification system using qualifiers, scopes, and event-based logging.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "EJB"],
+      image: "assets/img/bcd_projects/photo_5824486806480075069_y.jpg",
+      link: "https://github.com/Tharindu714/context-Dependency-injections.git",
+    },
+
+    {
+      name: "EAR Deployment Basic Structure Project 📦",
+      description:
+        "Demonstrate the simplest form of an enterprise Java application with separate EJB and Java EE client modules—your first step toward a full EAR deployment.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "EJB", "EAR"],
+      image: "assets/img/bcd_projects/photo_5824447838241798559_y.jpg",
+      link: "https://github.com/Tharindu714/EAR-Deployment-Basics.git",
+    },
+
+    {
+      name: "Delta Codex EAR Project 📦",
+      description:
+        "Demonstrate a complete Jakarta EE 9 EAR packaging with Core, EJB, Web, and EAR modules, ready for real-world deployment.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "EJB", "EAR"],
+      image: "assets/img/bcd_projects/photo_5824456892032858507_y.jpg",
+      link: "https://github.com/Tharindu714/EAR-Standard-Configurations-Template.git",
+    },
+
+    {
+      name: "Java Messaging Service (JMS) Topic Connection 🗨️",
+      description:
+        "Demonstrate a simple JMS Topic-based publish/subscribe application using GlassFish/Payara’s JMS provider.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "JMS", "GlassFish"],
+      image: "assets/img/bcd_projects/photo_5824633810325715412_y.jpg",
+      link: "https://github.com/Tharindu714/JMS-Topic-Connection.git",
+    },
+
+    {
+      name: "Java Messaging Service (JMS) Queue Connection Project 🗨️",
+      description:
+        "Demonstrate a point‑to‑point JMS Queue implementation using GlassFish/Payara’s JMS provider.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "JMS", "GlassFish"],
+      image: "assets/img/bcd_projects/photo_5824841837066697138_y.jpg",
+      link: "https://github.com/Tharindu714/JMS-Queue-Connection.git",
+    },
+
+    {
+      name: "ActiveMQ Messaging Project 🗨️",
+      description:
+        "Showcase a complete point-to-point messaging system using Apache ActiveMQ, featuring producer, consumer, and broker configuration. This guide walks through installation, setup, running examples, and best practices.",
+      technologies: [
+        "Java",
+        "IntelliJ IDEA",
+        "Java EE",
+        "ActiveMQ",
+        "GlassFish",
+      ],
+      image: "assets/img/bcd_projects/activemq.jpg",
+      link: "https://github.com/Tharindu714/Third-Party-JMS-project-basics.git",
+    },
+
+    {
+      name: "J2EE Transaction Backend Template 🚀",
+      description:
+        "A robust and modular J2EE backend template for handling transaction-based applications. Perfect for kickstarting your transaction microservices, financial applications, or any Java EE-based backend.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE"],
+      image: "assets/img/bcd_projects/transactions.png",
+      link: "https://github.com/Tharindu714/J2EE-Transaction-Bankend-Template.git",
+    },
+
+    {
+      name: "Online Auction System Project 🏷️",
+      description:
+        "A robust, enterprise-grade Online Auction System built with Jakarta EE, packaged as an EAR, leveraging ActiveMQ for async messaging and tested using JMeter and VisualVM.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "EJB", "EAR"],
+      image: "assets/img/bcd_projects/photo_5822374438484687265_y.jpg",
+      link: "https://github.com/Tharindu714/Developing-a-Distributed-Online-Auction-System-with-EJB-and-JMS.git",
+    },
+
+    {
+      name: "Simple Banking System with JTA 🏦",
+      description:
+        "A lightweight Java EE backend demonstrating account management and transaction processing with Java Transaction API (JTA).",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "JTA"],
+      image: "assets/img/bcd_projects/j2eebanking.jpg",
+      link: "https://github.com/Tharindu714/Simple-Banking-System-JTA.git",
+    },
+
+    {
+      name: "Programmatic Timer EJB Demo ⏱️",
+      description:
+        "A Java EE application showcasing the use of programmatic timers via the TimerService API. This example demonstrates how to create, manage, and cancel timers programmatically within an EJB environment.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "EJB"],
+      image: "assets/img/bcd_projects/j2eetimer.jfif",
+      link: "https://github.com/Tharindu714/Programmatical-Timer-J2EE.git",
+    },
+
+    {
+      name: "J2EE Built-in Interceptors Introduction 🔄",
+      description:
+        "A primer on using JEE container-managed interceptors for cross-cutting concerns without custom bindings, leveraging standard EJB lifecycle and method-level interception.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "Interceptors"],
+      image: "assets/img/bcd_projects/photo_5824786088391195053_y.jpg",
+      link: "https://github.com/Tharindu714/J2EE-Built-in-Interceptors.git",
+    },
+
+    {
+      name: "Customized Interceptors with Annotations in J2EE 🔄",
+      description:
+        "Explore how to define and apply custom interceptors using CDI/EJB annotations to modularize cross-cutting concerns such as logging, validation, and security.",
+      technologies: [
+        "Java",
+        "IntelliJ IDEA",
+        "Java EE",
+        "Interceptors",
+        "Annotations",
+      ],
+      image: "assets/img/bcd_projects/interceptors.jpg",
+      link: "https://github.com/Tharindu714/J2EE-Customize-Interceptors.git",
+    },
+
+    {
+      name: "Secured Enterprise-Level Admin Panel 🔐",
+      description:
+        "A Java EE–based web application featuring role-based access control, custom security realms, and a polished admin dashboard.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE"],
+      image: "assets/img/bcd_projects/photo_5824496543170935138_y.jpg",
+      link: "https://github.com/Tharindu714/Secured-Enterprise-Level-Admin-Panel.git",
+    },
+
+    {
+      name: "J2EE REST API Modules 🛠️",
+      description:
+        "A JAX-RS–powered RESTful API built with Java EE, providing CRUD endpoints under com.tharindu.web.rest for core domain entities.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "JAX-RS"],
+      image: "assets/img/bcd_projects/photo_5824367466518788463_y.jpg",
+      link: "https://github.com/Tharindu714/J2EE-REST-API.git",
+    },
+
+    {
+      name: "J2EE Web Services with Jersey 🌐",
+      description:
+        "A comprehensive demonstration of JAX-RS endpoints using Jersey, including request/response filters, controllers, and JSP-based views under WEB-INF.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "JAX-RS", "Jersey"],
+      image: "assets/img/bcd_projects/photo_5824564682827086221_y.jpg",
+      link: "https://github.com/Tharindu714/J2EE-WS-Jersy.git",
+    },
+
+    {
+      name: "J2EE Security with Database Integration 🛢",
+      description:
+        "Demonstrates securing a Jakarta EE application using a database-backed IdentityStore, JPA persistence, and container-managed JDBC connection pooling.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "MySQL"],
+      image: "assets/img/bcd_projects/photo_5824312392153152011_y.jpg",
+      link: "https://github.com/Tharindu714/J2EE-Security-API-with-MySQL.git",
+    },
+
+    {
+      name: "Manual Security AUTH Demo 🛡️",
+      description:
+        "A Jakarta EE application showcasing manual authentication and authorization using HttpAuthenticationMechanism, IdentityStore, EJB security annotations, and servlet-based access controls.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "Authentication"],
+      image: "assets/img/bcd_projects/manual_auth.png",
+      link: "https://github.com/Tharindu714/Manual-Security-AUTH.git",
+    },
+
+    {
+      name: "J2EE Security with JWT & Database 🛡️",
+      description:
+        "A Jakarta EE application demonstrating stateless authentication using JSON Web Tokens (JWT) backed by a database IdentityStore and JPA persistence.",
+      technologies: ["Java", "IntelliJ IDEA", "Java EE", "JWT", "MySQL"],
+      image: "assets/img/bcd_projects/photo_5824285840665328011_y.jpg",
+      link: "https://github.com/Tharindu714/J2EE-Security-jwt-with-Database.git",
+    },
+  ];
+
+  const oodp = [
+    {
+      name: "Editable Document Editor 📝",
+      description:
+        "A Java-based document editor that allows users to create, edit, and save text documents with basic formatting options. It demonstrates the use of Object-Oriented Design Principles (OODP) such as encapsulation, inheritance, and polymorphism.",
+      technologies: ["Java", "Java Swing", "Composite", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/photo_5824784228670356017_y.jpg",
+      link: "https://github.com/Tharindu714/Document-name-editor-app-composite.git",
+    },
+
+    {
+      name: "Holiday Package Builder Graphical User Interface 🏖️",
+      description:
+        "A Java Swing application to design custom holiday packages using the Builder pattern with printable invoices and visual add-on selection.",
+      technologies: ["Java", "Java Swing", "Builder", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/hms.png",
+      link: "https://github.com/Tharindu714/HMS-package-selector-Builder-patten.git",
+    },
+
+    {
+      name: "Remote Control Simulator 🎮",
+      description:
+        "A sleek Java‑Swing application illustrating the Bridge Pattern in action—switch seamlessly between TV and Media Player remotes, full‑screen GIF animations included!",
+      technologies: ["Java", "Java Swing", "Bridge", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/photo_5824410446256519602_y.jpg",
+      link: "https://github.com/Tharindu714/Remote-Changing-Application-Bridge.git",
+    },
+
+    {
+      name: "Lost Ark Hero Upgrader Interface 🏹",
+      description:
+        "An immersive Java Swing application demonstrating the Decorator Design Pattern by allowing players to dynamically enhance their Lost Ark heroes with multiple power-ups at runtime.",
+      technologies: ["Java", "Java Swing", "Decorator", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/lost_ark.png",
+      link: "https://github.com/Tharindu714/Lost-Ark-Hero-Upgrade-Decorator-Pattern.git",
+    },
+
+    {
+      name: "Fresh Dine Ordering System 🍽️",
+      description:
+        "A modern Java Swing application demonstrating the Composite Design Pattern by building a flexible restaurant menu and order system. Customers can browse nested menus, add individual items or entire sub-menus to their orders, and see real-time total price calculations—all with a fresh forest‑cream UI.",
+      technologies: ["Java", "Java Swing", "Composite", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/food_order.png",
+      link: "https://github.com/Tharindu714/Food-Ordering-Composite-Pattern.git",
+    },
+
+    {
+      name: "Messaging Agent Bridge Pattern 📡",
+      description:
+        "A sleek, modular Java Swing desktop messenger that sends Text, Image, or Audio messages via Email, WhatsApp, or SMS — all powered by the Bridge Pattern.",
+      technologies: ["Java", "Java Swing", "Bridge", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/msg_agent.png",
+      link: "https://github.com/Tharindu714/Messaging-Agent-Bridge-Pattern.git",
+    },
+
+    {
+      name: "SmartWatch Builder Pattern App ⌚",
+      description:
+        "A sleek Java Swing desktop application showcasing the Builder Pattern, complete with live preview and instant configuration output.",
+      technologies: ["Java", "Java Swing", "Builder", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/smart.png",
+      link: "https://github.com/Tharindu714/SmartWatch-Builder-Pattern-App.git",
+    },
+
+    {
+      name: "Secure Banking Validator DialogBox 💳",
+      description:
+        "A polished Java Swing desktop app demonstrating the Chain of Responsibility pattern for real-time transaction validation.",
+      technologies: [
+        "Java",
+        "Java Swing",
+        "chain of Responsibility",
+        "IntelliJ IDEA",
+      ],
+      image: "assets/img/oodp_projects/smart_banking.png",
+      link: "https://github.com/Tharindu714/Security-Validator-Banking-DialogBox.git",
+    },
+
+    {
+      name: "Flyweight Text Editor Application 📝",
+      description:
+        "TC Text Editor is a sleek, high-performance Java Swing application showcasing the Flyweight Design Pattern. Built with clean code and Maven, it delivers an intuitive UI and extreme memory efficiency.",
+      technologies: ["Java", "Java Swing", "Flyweight", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/photo_5824687497416915529_y.jpg",
+      link: "https://github.com/Tharindu714/Flyweight-Text-Editor-Application.git",
+    },
+
+    {
+      name: "Smart Home Command Interpreter 🏠",
+      description:
+        "A Smart Home Command Interpreter is a desktop Java application that demonstrates the Interpreter Design Pattern in action.",
+      technologies: ["Java", "Java Swing", "Interpreter", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/SmartHome.jpg",
+      link: "https://github.com/Tharindu714/Smart-Home-command-Dialog-Interpreter.git",
+    },
+
+    {
+      name: "Code-Editor-Memento Pattern 📝",
+      description:
+        "A sleek, dark-themed Java Swing code editor with robust Undo/Redo powered by the Memento Pattern.",
+      technologies: ["Java", "Java Swing", "Memento", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/memento.png",
+      link: "https://github.com/Tharindu714/Code-Editor-Memento.git",
+    },
+
+    {
+      name: "DrawingPrototypeApp — Prototype Pattern Studio 🎨",
+      description:
+        "Make beautiful clones, fast. A compact, delightful Java Swing app that demonstrates the Prototype design pattern through an interactive drawing studio.",
+      technologies: ["Java", "Java Swing", "Prototype", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/prototype.png",
+      link: "https://github.com/Tharindu714/Prototype-Shape-Drawing-Application.git",
     },
   ];
 
@@ -694,7 +1166,7 @@
       name: "JavaScript Fun Game: Cowboy Adventure",
       description:
         "The project was built with vanilla HTML5 Canvas and JavaScript, making it a perfect exercise for coding bootcamp enthusiasts and those new to game development. The game emphasizes the practical application of JavaScript for dynamic content manipulation and interactive design.",
-        technologies: ["HTML5", "CSS3", "JavaScript"],
+      technologies: ["HTML5", "CSS3", "JavaScript"],
       image: "https://i.ytimg.com/vi/Wp-VDfxCmLQ/hqdefault.jpg",
       link: "javascript-game-development.html",
     },
@@ -767,6 +1239,233 @@
     </a>
   `;
     projectsContainer.appendChild(projectDiv);
+  });
+
+  const Fungameonline_Container = document.getElementById("fun-container");
+
+  funny.forEach((fun_project) => {
+    const funDiv = document.createElement("div");
+    funDiv.classList.add("service-item");
+    funDiv.style = `
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      width: 500px;
+      height: 550px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    `;
+
+    funDiv.innerHTML = `
+      <div class="image-container">
+        <img src="${fun_project.image}" alt="Project Image" />
+      </div>
+      
+      <h3 class="title">${fun_project.name}</h3>
+      <p class="description">${fun_project.description}</p>
+    
+      <div class="technologies">
+        ${fun_project.technologies
+          .map(
+            (tech) => `
+            <span class="tech-tag">
+              ${tech}
+            </span>`
+          )
+          .join("")}
+      </div>
+    
+    <a href="${fun_project.link}" class="glow-button" target="_blank"
+    style="
+    color: #0cde91;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    ">
+    🔗 View this Project
+    </a>
+  `;
+    Fungameonline_Container.appendChild(funDiv);
+  });
+
+  const bcd_Container = document.getElementById("bcd-container");
+
+  bcd_proj.forEach((bcd_project) => {
+    const bcdDiv = document.createElement("div");
+    bcdDiv.classList.add("service-item");
+    bcdDiv.style = `
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      width: 500px;
+      height: 550px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    `;
+
+    bcdDiv.innerHTML = `
+      <div class="image-container">
+        <img src="${bcd_project.image}" alt="Project Image" />
+      </div>
+      
+      <h3 class="title">${bcd_project.name}</h3>
+      <p class="description">${bcd_project.description}</p>
+
+            <div class="technologies">
+        ${bcd_project.technologies
+          .map(
+            (tech) => `
+            <span class="tech-tag">
+              ${tech}
+            </span>`
+          )
+          .join("")}
+      </div>
+    
+    <a href="${bcd_project.link}" class="glow-button" target="_blank"
+    style="
+    color: #0cde91;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    ">
+    🔗 View this Project
+    </a>
+  `;
+    bcd_Container.appendChild(bcdDiv);
+  });
+
+  const oodp_Container = document.getElementById("oodp-container");
+
+  oodp.forEach((oodp_project) => {
+    const oodpDiv = document.createElement("div");
+    oodpDiv.classList.add("service-item");
+    oodpDiv.style = `
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      width: 500px;
+      height: 550px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    `;
+
+    oodpDiv.innerHTML = `
+      <div class="image-container">
+        <img src="${oodp_project.image}" alt="Project Image" />
+      </div>
+      
+      <h3 class="title">${oodp_project.name}</h3>
+      <p class="description">${oodp_project.description}</p>
+
+            <div class="technologies">
+        ${oodp_project.technologies
+          .map(
+            (tech) => `
+            <span class="tech-tag">
+              ${tech}
+            </span>`
+          )
+          .join("")}
+      </div>
+    
+    <a href="${oodp_project.link}" class="glow-button" target="_blank"
+    style="
+    color: #0cde91;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    ">
+    🔗 View this Project </a>
+  `;
+    oodp_Container.appendChild(oodpDiv);
+  });
+
+  const reserchContainer = document.getElementById("research-container");
+
+  research.forEach((research) => {
+    const researchtDiv = document.createElement("div");
+    researchtDiv.classList.add("service-item");
+    researchtDiv.style = `
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      width: 500px;
+      height: 550px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    `;
+
+    researchtDiv.innerHTML = `
+      <div class="image-container">
+        <img src="${research.image}" alt="Project Image" />
+      </div>
+      
+      <h3 class="title">${research.name}</h3>
+      <p class="description">${research.description}</p>
+    
+      <div class="technologies">
+        ${research.technologies
+          .map(
+            (tech) => `
+            <span class="tech-tag">
+              ${tech}
+            </span>`
+          )
+          .join("")}
+      </div>
+    
+    <a href="${research.link}" class="glow-button" target="_blank"
+    style="
+    color: #0cde91;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    ">
+    🔗 View this Project
+    </a>
+  `;
+    reserchContainer.appendChild(researchtDiv);
   });
 
   const postContainer = document.getElementById("Post-container");
@@ -898,7 +1597,6 @@
     🔗 View this Project
     </a>
   `;
-  openSourceContainer.appendChild(openSourceDiv);
+    openSourceContainer.appendChild(openSourceDiv);
   });
-
 })();

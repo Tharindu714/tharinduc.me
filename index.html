@@ -73,6 +73,45 @@
       gap: 20px;
     }
 
+    .project-section {
+      overflow: hidden; 
+      max-height: 0;
+      /* Collapsed by default */
+      transition: max-height 0.5s ease-out, padding 0.4s ease-out;
+      padding-top: 0;
+      padding-bottom: 0;
+      opacity: 0;
+    }
+
+    .project-section.open {
+      max-height: 9999px;
+      /* large enough to fit your cards */
+      padding-top: 20px;
+      padding-bottom: 20px;
+      opacity: 1;
+      transition: max-height 0.6s ease-in, padding 0.4s ease-in,
+        opacity 0.4s ease-in;
+    }
+
+    .section-header {
+      cursor: pointer;
+      user-select: none;
+      padding: 20px;
+      background: #111;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .section-header:hover {
+      background: #1a1a1a;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      color: white;
+      text-transform: uppercase;
+    }
+
     .hero-video {
       position: absolute;
       top: 0;
@@ -182,11 +221,12 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Freelancer Works</a></li>
-          <li><a href="#open-source">Open Source Projects</a></li>
+          <li><a href="#services">Freelancing</a></li>
+          <li><a href="#open-source">Open Source</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#funn">Fun Proj.</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#blogs">Blogs</a></li>
-          
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list bg-dark text-light"></i>
       </nav>
@@ -280,30 +320,165 @@
       </div>
     </section>
 
-        <!-- Open Source Section -->
-        <section id="open-source" class="services section" style="
-        background: #0d0d0d;
-        color: #fff;
-        padding: 80px 0;
-        text-align: center;
-      ">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2 style="color: white; text-transform: uppercase">Open Source Projects</h2>
-      <p style="color: whitesmoke; font-size: 20px">
-        Some of My Recent Open Source Projects
-      </p>
-    </div>
-    <!-- End Section Title -->
+    <!-- Open Source Section -->
+    <section id="open-source" class="services section" style="
+          background: #0d0d0d;
+          color: #fff;
+          padding: 80px 0;
+          text-align: center;
+        ">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: #0cde91; text-transform: uppercase">
+          Open Source Projects
+        </h2>
+        <p style="color: whitesmoke; font-size: 15px">
+          Some of My Recent Open Source Projects
+        </p>
+      </div>
+      <!-- End Section Title -->
 
-    <div id="open-source-container" style="
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1rem;
-          justify-content: center;
-        "></div>
-  </section>
-  <!-- /Open Source Section -->
+      <div id="open-source-container" style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+          "></div>
+    </section>
+    <!-- /Open Source Section -->
+
+    <!-- Research Section -->
+    <section id="research" class="services section" style="
+          background: #0d0d0d;
+          color: #fff;
+          padding: 80px 0;
+          text-align: center;
+        ">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: #0cde91; text-transform: uppercase">
+          Research Projects
+        </h2>
+        <p style="color: whitesmoke; font-size: 15px">
+          These are my all my ongoing and completed research projects
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div id="research-container" style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+          "></div>
+    </section>
+    <!-- /Resaerch Section -->
+
+    <!-- Fun Section -->
+    <section id="funn" class="services section" style="
+          background: #0d0d0d;
+          color: #fff;
+          padding: 80px 0;
+          text-align: center;
+        ">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: #0cde91; text-transform: uppercase">Fun Projects</h2>
+        <p style="color: whitesmoke; font-size: 15px">
+          I love to create fun and engaging projects.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div id="fun-container" style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+          "></div>
+    </section>
+    <!-- /Fun Section -->
+
+    <!-- Projects Section -->
+    <section id="services" class="services section" style="
+          background: #0d0d0d;
+          color: #fff;
+          padding: 80px 0;
+          text-align: center;
+        ">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: #0cde91; text-transform: uppercase">Projects</h2>
+        <p style="color: whitesmoke; font-size: 15px">
+          These are my all completed Projects and freelancer works
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div id="projects-container" style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+          "></div>
+    </section>
+    <!-- /Projects Section -->
+
+    <!-- BCD Section -->
+    <section id="BCD" class="services section" style="
+          background: #0d0d0d;
+          color: #fff;
+          padding: 80px 0;
+          text-align: center;
+        ">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: #0cde91; text-transform: uppercase">
+          Business Component Dev Projects
+        </h2>
+        <p style="color: whitesmoke; font-size: 15px">
+          These projects are focused on building reusable components for
+          business applications, enhancing efficiency and scalability.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div id="bcd-container" style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+          "></div>
+    </section>
+    <!-- /BCD Section -->
+
+    <!-- OODP Section -->
+    <section id="OODP" class="services section" style="
+          background: #0d0d0d;
+          color: #fff;
+          padding: 80px 0;
+          text-align: center;
+        ">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: #0cde91; text-transform: uppercase">
+          Object Oriented Design Pattern Projects
+        </h2>
+        <p style="color: whitesmoke; font-size: 15px">
+          These projects showcase my expertise in object-oriented design
+          principles, focusing on creating modular and maintainable code.
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div id="oodp-container" style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+          "></div>
+    </section>
+    <!-- /OODP Section -->
 
     <section id="skills" class="clients section bg-black">
       <div class="container section-title" data-aos="fade-up">
@@ -319,38 +494,13 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="services" class="services section" style="
-          background: #0d0d0d;
-          color: #fff;
-          padding: 80px 0;
-          text-align: center;
-        ">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 style="color: white; text-transform: uppercase">Projects</h2>
-        <p style="color: whitesmoke; font-size: 20px">
-          These are my all completed Projects and freelancer works
-        </p>
-      </div>
-      <!-- End Section Title -->
-
-      <div id="projects-container" style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-          "></div>
-    </section>
-    <!-- /Projects Section -->
-
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section dark-background">
       <img src="assets/img/cta-bg.jpg" alt="" />
 
       <div class="container">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-9 text-center text-xl-start">
+          <div class="col-xl9 text-center text-xl-start">
             <h3>Let's Bring Your Vision to Life!</h3>
             <p>
               Ready to transform your ideas into reality? Whether you need a
@@ -409,14 +559,12 @@
         ">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 style="color: white; text-transform: uppercase">Blog Posts</h2>
-        <p style="
-              color: whitesmoke;
+        <h2 style="color: #0cde91; text-transform: uppercase">Blog Posts</h2>
+        <p style="color: whitesmoke;
               text-transform: lowercase;
-              font-size: 17px;
-            ">
+              font-size: 15px;">
           My blog is where I share insights on full-stack development,
-          <br />Java, Android, React.js, PHP, JavaScript, and more.
+          <br /><strong>Java, Android, React.js, PHP, JavaScript, and more.</strong> 
         </p>
       </div>
       <!-- End Section Title -->
@@ -487,6 +635,73 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    /**
+     * This script:
+     * 1) Finds each section with id in the list (open-source, research, funn, services, BCD, blogs)
+     * 2) Replaces the existing .container.section-title with a .section-header (keeps inner HTML)
+     * 3) Wraps the existing "<div id='...-container'>" into a .project-section wrapper
+     * 4) Adds click handler on the header to toggle the 'open' class on the wrapper
+     *
+     * No CSS changes were made — it uses your .section-header and .project-section rules already in <style>.
+     */
+    document.addEventListener("DOMContentLoaded", function () {
+      const sectionIds = [
+        "open-source",
+        "research",
+        "funn",
+        "services",
+        "BCD",
+        "blogs",
+        "OODP"
+      ];
+
+      sectionIds.forEach(function (id) {
+        const section = document.getElementById(id);
+        if (!section) return;
+
+        // Find the title block and the content container inside the section
+        const titleBlock = section.querySelector(".container.section-title");
+        // look for any child div whose id ends with "-container"
+        const contentContainer = Array.from(section.children).find((child) =>
+          child.id && child.id.endsWith("-container")
+        );
+
+        // If title and content exist, transform them
+        if (titleBlock && contentContainer) {
+          // Create header div and move innerHTML of titleBlock into it
+          const header = document.createElement("div");
+          header.className = "section-header";
+          header.innerHTML = titleBlock.innerHTML;
+
+          // Replace titleBlock with header
+          titleBlock.parentNode.replaceChild(header, titleBlock);
+
+          // Create wrapper and move contentContainer into it
+          const wrapper = document.createElement("div");
+          wrapper.className = "project-section";
+
+          // Replace contentContainer with wrapper, then append content inside wrapper
+          contentContainer.parentNode.replaceChild(wrapper, contentContainer);
+          wrapper.appendChild(contentContainer);
+
+          // Toggle on header click
+          header.addEventListener("click", function () {
+            wrapper.classList.toggle("open");
+            // optional: smooth scroll into view when opening
+            if (wrapper.classList.contains("open")) {
+              // small delay to allow max-height change; then scroll
+              setTimeout(function () {
+                wrapper.scrollIntoView({ behavior: "smooth", block: "start" });
+              }, 200);
+            }
+          });
+          // If you want some sections to be open by default, uncomment lines below
+          // if (id === 'open-source') wrapper.classList.add('open');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
