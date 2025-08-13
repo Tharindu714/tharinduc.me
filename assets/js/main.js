@@ -1600,3 +1600,71 @@
     openSourceContainer.appendChild(openSourceDiv);
   });
 })();
+
+ /**
+     * This script:
+     * 1) Finds each section with id in the list (open-source, research, funn, services, BCD, blogs)
+     * 2) Replaces the existing .container.section-title with a .section-header (keeps inner HTML)
+     * 3) Wraps the existing "<div id='...-container'>" into a .project-section wrapper
+     * 4) Adds click handler on the header to toggle the 'open' class on the wrapper
+     *
+     * No CSS changes were made — it uses your .section-header and .project-section rules already in <style>.
+     */
+    document.addEventListener("DOMContentLoaded", function () {
+      const sectionIds = [
+        "open-source",
+        "research",
+        "funn",
+        "services",
+        "BCD",
+        "OODP",
+      ];
+
+      sectionIds.forEach(function (id) {
+        const section = document.getElementById(id);
+        if (!section) return;
+
+        // Find the title block and the content container inside the section
+        const titleBlock = section.querySelector(".container.section-title");
+        // look for any child div whose id ends with "-container"
+        const contentContainer = Array.from(section.children).find(
+          (child) => child.id && child.id.endsWith("-container")
+        );
+
+        // If title and content exist, transform them
+        if (titleBlock && contentContainer) {
+          // Create header div and move innerHTML of titleBlock into it
+          const header = document.createElement("div");
+          header.className = "section-header";
+          header.innerHTML = titleBlock.innerHTML;
+
+          // Replace titleBlock with header
+          titleBlock.parentNode.replaceChild(header, titleBlock);
+
+          // Create wrapper and move contentContainer into it
+          const wrapper = document.createElement("div");
+          wrapper.className = "project-section";
+
+          // Replace contentContainer with wrapper, then append content inside wrapper
+          contentContainer.parentNode.replaceChild(wrapper, contentContainer);
+          wrapper.appendChild(contentContainer);
+
+          // Toggle on header click
+          header.addEventListener("click", function () {
+            wrapper.classList.toggle("open");
+            // optional: smooth scroll into view when opening
+            if (wrapper.classList.contains("open")) {
+              // small delay to allow max-height change; then scroll
+              setTimeout(function () {
+                wrapper.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }, 200);
+            }
+          });
+          // If you want some sections to be open by default, uncomment lines below
+          // if (id === 'open-source') wrapper.classList.add('open');
+        }
+      });
+    });
