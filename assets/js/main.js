@@ -1070,6 +1070,33 @@
       image: "assets/img/oodp_projects/prototype.png",
       link: "https://github.com/Tharindu714/Prototype-Shape-Drawing-Application.git",
     },
+
+    {
+      name: "CalcPro - Custom Formula Interpreter 📐e = ∑∞ⁿ⁼⁰ ¹ₙ🤓",
+      description:
+        "CalcPro is a colourful, math-inclined single-file Java demo that implements the Interpreter Design Pattern to parse and evaluate custom formulas like ADD(5, 10), MULTIPLY(ADD(2,3),4) and DIVIDE(SUBTRACT(20,4),2).",
+      technologies: ["Java", "Java Swing", "interpreter", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/calcPro.PNG",
+      link: "https://github.com/Tharindu714/CalcPro-Custom-Formula-Interpreter.git",
+    },
+
+    {
+      name: "Visitor Pattern - Shape Creator 🖼️",
+      description:
+        "Compute areas cleanly — without changing your shape classes. A lightweight, educational, and visually delightful Java Swing application demonstrating the Visitor design pattern to compute areas for multiple shape types (Circle, Square, Triangle) while keeping code open for extension.",
+      technologies: ["Java", "Java Swing", "visitor", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/vistor.png",
+      link: "https://github.com/Tharindu714/Visitor-pattern-Shapes-App.git",
+    },
+
+    {
+      name: "Urban Traffic Simulator 🚦",
+      description:
+        "Flyweight-Urban-Traffic-Simulator — a colourful, real-time 2D/3D-style demo (single-file Java Swing) that demonstrates the Flyweight Design Pattern to efficiently simulate thousands of vehicles without duplicating heavy geometry/texture data",
+      technologies: ["Java", "Java Swing", "Flyweight", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/flyweight.png",
+      link: "https://github.com/Tharindu714/Flyweight-Urban-Traffic-simulator.git",
+    },
   ];
 
   const skills = [
@@ -1601,70 +1628,70 @@
   });
 })();
 
- /**
-     * This script:
-     * 1) Finds each section with id in the list (open-source, research, funn, services, BCD, blogs)
-     * 2) Replaces the existing .container.section-title with a .section-header (keeps inner HTML)
-     * 3) Wraps the existing "<div id='...-container'>" into a .project-section wrapper
-     * 4) Adds click handler on the header to toggle the 'open' class on the wrapper
-     *
-     * No CSS changes were made — it uses your .section-header and .project-section rules already in <style>.
-     */
-    document.addEventListener("DOMContentLoaded", function () {
-      const sectionIds = [
-        "open-source",
-        "research",
-        "funn",
-        "services",
-        "BCD",
-        "OODP",
-      ];
+/**
+ * This script:
+ * 1) Finds each section with id in the list (open-source, research, funn, services, BCD, blogs)
+ * 2) Replaces the existing .container.section-title with a .section-header (keeps inner HTML)
+ * 3) Wraps the existing "<div id='...-container'>" into a .project-section wrapper
+ * 4) Adds click handler on the header to toggle the 'open' class on the wrapper
+ *
+ * No CSS changes were made — it uses your .section-header and .project-section rules already in <style>.
+ */
+document.addEventListener("DOMContentLoaded", function () {
+  const sectionIds = [
+    "open-source",
+    "research",
+    "funn",
+    "services",
+    "BCD",
+    "OODP",
+  ];
 
-      sectionIds.forEach(function (id) {
-        const section = document.getElementById(id);
-        if (!section) return;
+  sectionIds.forEach(function (id) {
+    const section = document.getElementById(id);
+    if (!section) return;
 
-        // Find the title block and the content container inside the section
-        const titleBlock = section.querySelector(".container.section-title");
-        // look for any child div whose id ends with "-container"
-        const contentContainer = Array.from(section.children).find(
-          (child) => child.id && child.id.endsWith("-container")
-        );
+    // Find the title block and the content container inside the section
+    const titleBlock = section.querySelector(".container.section-title");
+    // look for any child div whose id ends with "-container"
+    const contentContainer = Array.from(section.children).find(
+      (child) => child.id && child.id.endsWith("-container")
+    );
 
-        // If title and content exist, transform them
-        if (titleBlock && contentContainer) {
-          // Create header div and move innerHTML of titleBlock into it
-          const header = document.createElement("div");
-          header.className = "section-header";
-          header.innerHTML = titleBlock.innerHTML;
+    // If title and content exist, transform them
+    if (titleBlock && contentContainer) {
+      // Create header div and move innerHTML of titleBlock into it
+      const header = document.createElement("div");
+      header.className = "section-header";
+      header.innerHTML = titleBlock.innerHTML;
 
-          // Replace titleBlock with header
-          titleBlock.parentNode.replaceChild(header, titleBlock);
+      // Replace titleBlock with header
+      titleBlock.parentNode.replaceChild(header, titleBlock);
 
-          // Create wrapper and move contentContainer into it
-          const wrapper = document.createElement("div");
-          wrapper.className = "project-section";
+      // Create wrapper and move contentContainer into it
+      const wrapper = document.createElement("div");
+      wrapper.className = "project-section";
 
-          // Replace contentContainer with wrapper, then append content inside wrapper
-          contentContainer.parentNode.replaceChild(wrapper, contentContainer);
-          wrapper.appendChild(contentContainer);
+      // Replace contentContainer with wrapper, then append content inside wrapper
+      contentContainer.parentNode.replaceChild(wrapper, contentContainer);
+      wrapper.appendChild(contentContainer);
 
-          // Toggle on header click
-          header.addEventListener("click", function () {
-            wrapper.classList.toggle("open");
-            // optional: smooth scroll into view when opening
-            if (wrapper.classList.contains("open")) {
-              // small delay to allow max-height change; then scroll
-              setTimeout(function () {
-                wrapper.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-              }, 200);
-            }
-          });
-          // If you want some sections to be open by default, uncomment lines below
-          // if (id === 'open-source') wrapper.classList.add('open');
+      // Toggle on header click
+      header.addEventListener("click", function () {
+        wrapper.classList.toggle("open");
+        // optional: smooth scroll into view when opening
+        if (wrapper.classList.contains("open")) {
+          // small delay to allow max-height change; then scroll
+          setTimeout(function () {
+            wrapper.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }, 200);
         }
       });
-    });
+      // If you want some sections to be open by default, uncomment lines below
+      // if (id === 'open-source') wrapper.classList.add('open');
+    }
+  });
+});
