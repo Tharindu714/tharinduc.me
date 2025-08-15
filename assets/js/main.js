@@ -1124,6 +1124,33 @@
       image: "assets/img/oodp_projects/smartHome_mediator.png",
       link: "https://github.com/Tharindu714/Smart-Home-Mediator-Controller.git",
     },
+
+    {
+      name: "Memento Text Editor ✎",
+      description:
+        "A sleek, colourful Java Swing demo that implements the Memento design pattern to provide reliable multi-step undo/redo for a text editor.",
+      technologies: ["Java", "Java Swing", "memento", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/memento_text_editor.png",
+      link: "https://github.com/Tharindu714/Memento-Text-Editor-Application.git",
+    },
+
+    {
+      name: "Player Prototype Game 🎮",
+      description:
+        "A colourful Java Swing demo that demonstrates the Prototype design pattern. Create an original player, clone it multiple times to experiment with ‘what-if’ scenarios, and manipulate clones independently without affecting the original.",
+      technologies: ["Java", "Java Swing", "prototype", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/prototype_lab.png",
+      link: "https://github.com/Tharindu714/Player-Prototype-Game-Demo.git",
+    },
+
+    {
+      name: "ShopEasy — Visitor Pattern Shopping Cart 🛍️",
+      description:
+        "Different item types (Book, Electronics, Clothing) accept visitors that perform operations such as printing details, totaling prices, and applying discounts — without modifying the item classes themselves.",
+      technologies: ["Java", "Java Swing", "visitor", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/shopeasy.png",
+      link: "https://github.com/Tharindu714/Shopping-Cart-Visitor-Application.git",
+    },
   ];
 
   const skills = [
@@ -1268,13 +1295,13 @@
     
       <div class="technologies">
         ${project.technologies
-        .map(
-          (tech) => `
+          .map(
+            (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-        )
-        .join("")}
+          )
+          .join("")}
       </div>
     
     <a href="${project.link}" class="glow-button" target="_blank"
@@ -1325,13 +1352,13 @@
     
       <div class="technologies">
         ${fun_project.technologies
-        .map(
-          (tech) => `
+          .map(
+            (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-        )
-        .join("")}
+          )
+          .join("")}
       </div>
     
     <a href="${fun_project.link}" class="glow-button" target="_blank"
@@ -1382,13 +1409,13 @@
 
             <div class="technologies">
         ${bcd_project.technologies
-        .map(
-          (tech) => `
+          .map(
+            (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-        )
-        .join("")}
+          )
+          .join("")}
       </div>
     
     <a href="${bcd_project.link}" class="glow-button" target="_blank"
@@ -1439,13 +1466,13 @@
 
             <div class="technologies">
         ${oodp_project.technologies
-        .map(
-          (tech) => `
+          .map(
+            (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-        )
-        .join("")}
+          )
+          .join("")}
       </div>
     
     <a href="${oodp_project.link}" class="glow-button" target="_blank"
@@ -1495,13 +1522,13 @@
     
       <div class="technologies">
         ${research.technologies
-        .map(
-          (tech) => `
+          .map(
+            (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-        )
-        .join("")}
+          )
+          .join("")}
       </div>
     
     <a href="${research.link}" class="glow-button" target="_blank"
@@ -1552,13 +1579,13 @@
     
       <div class="technologies">
         ${post.technologies
-        .map(
-          (tech) => `
+          .map(
+            (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-        )
-        .join("")}
+          )
+          .join("")}
       </div>
     
     <a href="${post.link}" class="glow-button" target="_blank"
@@ -1627,13 +1654,13 @@
     
       <div class="technologies">
         ${open_source_projects.technologies
-        .map(
-          (tech) => `
+          .map(
+            (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-        )
-        .join("")}
+          )
+          .join("")}
       </div>
     
     <a href="${open_source_projects.link}" class="glow-button" target="_blank"
