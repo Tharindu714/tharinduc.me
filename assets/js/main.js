@@ -1097,6 +1097,33 @@
       image: "assets/img/oodp_projects/flyweight.png",
       link: "https://github.com/Tharindu714/Flyweight-Urban-Traffic-simulator.git",
     },
+
+    {
+      name: "Music Streaming Application 📀",
+      description:
+        "MelodyShare is a compact, colourful demo that uses the Flyweight design pattern to share heavy album data (artwork, artist, album meta) across many Song instances. This reduces memory usage while allowing thousands of simultaneous plays.",
+      technologies: ["Java", "Java Swing", "Flyweight", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/melodyshare.png",
+      link: "https://github.com/Tharindu714/Flyweight-Music-Streaming-Application.git",
+    },
+
+    {
+      name: "Expression Interpreter Calculator 👩🏻‍💻",
+      description:
+        "A colourful, educational Java Swing demo that parses integer expressions (infix) containing + and -, builds an AST using the Interpreter pattern, evaluates step-by-step, and displays tokens, RPN, evaluation steps and the final result.",
+      technologies: ["Java", "Java Swing", "interpreter", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/interpreter_calculator.png",
+      link: "https://github.com/Tharindu714/Expression-Interpreter-Calculator.git",
+    },
+
+    {
+      name: "Smart Home Controller Mediator 🏠",
+      description:
+        "A colourful Java Swing demo that demonstrates the Mediator design pattern (Central Hub) for smart home devices. Devices (lights, thermostat, cameras, notifiers) never talk to each other directly",
+      technologies: ["Java", "Java Swing", "Mediator", "IntelliJ IDEA"],
+      image: "assets/img/oodp_projects/smartHome_mediator.png",
+      link: "https://github.com/Tharindu714/Smart-Home-Mediator-Controller.git",
+    },
   ];
 
   const skills = [
@@ -1241,13 +1268,13 @@
     
       <div class="technologies">
         ${project.technologies
-          .map(
-            (tech) => `
+        .map(
+          (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-          )
-          .join("")}
+        )
+        .join("")}
       </div>
     
     <a href="${project.link}" class="glow-button" target="_blank"
@@ -1298,13 +1325,13 @@
     
       <div class="technologies">
         ${fun_project.technologies
-          .map(
-            (tech) => `
+        .map(
+          (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-          )
-          .join("")}
+        )
+        .join("")}
       </div>
     
     <a href="${fun_project.link}" class="glow-button" target="_blank"
@@ -1355,13 +1382,13 @@
 
             <div class="technologies">
         ${bcd_project.technologies
-          .map(
-            (tech) => `
+        .map(
+          (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-          )
-          .join("")}
+        )
+        .join("")}
       </div>
     
     <a href="${bcd_project.link}" class="glow-button" target="_blank"
@@ -1412,13 +1439,13 @@
 
             <div class="technologies">
         ${oodp_project.technologies
-          .map(
-            (tech) => `
+        .map(
+          (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-          )
-          .join("")}
+        )
+        .join("")}
       </div>
     
     <a href="${oodp_project.link}" class="glow-button" target="_blank"
@@ -1468,13 +1495,13 @@
     
       <div class="technologies">
         ${research.technologies
-          .map(
-            (tech) => `
+        .map(
+          (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-          )
-          .join("")}
+        )
+        .join("")}
       </div>
     
     <a href="${research.link}" class="glow-button" target="_blank"
@@ -1525,13 +1552,13 @@
     
       <div class="technologies">
         ${post.technologies
-          .map(
-            (tech) => `
+        .map(
+          (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-          )
-          .join("")}
+        )
+        .join("")}
       </div>
     
     <a href="${post.link}" class="glow-button" target="_blank"
@@ -1600,13 +1627,13 @@
     
       <div class="technologies">
         ${open_source_projects.technologies
-          .map(
-            (tech) => `
+        .map(
+          (tech) => `
             <span class="tech-tag">
               ${tech}
             </span>`
-          )
-          .join("")}
+        )
+        .join("")}
       </div>
     
     <a href="${open_source_projects.link}" class="glow-button" target="_blank"
